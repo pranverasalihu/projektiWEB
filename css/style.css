@@ -1,0 +1,122 @@
+/*========================================
+=              GENERAL STYLE             =
+========================================*/
+body {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+	color: black;
+	position: relative;
+	overflow-x: hidden;
+}
+input,
+textarea,
+select,
+option {
+	font-family: 'Roboto', sans-serif;
+	opacity: 1;
+}
+a{
+	text-decoration: none;
+	color: inherit;
+}
+.container{
+	max-width: 1280px;
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+}
+.block_section{
+	float: left;
+	width: 100%;
+	clear: both;
+}
+/*=====  End of GENERAL STYLE  ======*/
+/*========================================
+=                  HEADER                =
+========================================*/
+.main_header{
+	background-color: rgba(0,0,0,0.4);
+	position: fixed;
+	z-index: 9;
+	height: 110px;
+	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+	transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+}
+.main_header.is--fixed{
+	background-color: #fff;
+	height: 80px;
+}
+.headerWrap{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.logo_header{
+	float: left;
+}
+.is--fixed .logo_header a{
+	color: #b17e64;
+}
+.logo_header a{
+	font-size: 19px;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: 300;
+	letter-spacing: 1.85px;
+}
+.logo_header a span{
+	font-size: 52px;
+    font-family: 'Dancing Script', cursive;
+}
+.nav_wrapper{
+	float: right;
+}
+.nav_wrapper li{
+	float: left;
+	padding-right: 10px;
+}
+.nav_wrapper li a{
+	height: 110px;
+    float: left;
+    display: flex;
+	align-items: center;
+	padding: 2px 30px 0;
+	font-size: 20px;
+	color: #efefef;
+	border-bottom: 2px solid transparent;
+	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+	transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
+}
+.is--fixed .nav_wrapper li a{
+	color: #b17e64;
+	height: 80px;
+}
+.nav_wrapper a:hover{
+	border-bottom-color: #fff;
+}
+.is--fixed .nav_wrapper a:hover{
+	border-bottom-color: #b17e64;
+}
+
+/*=====  End of HEADER  ======*/
+
+/*========================================
+=                   HOME                 =
+========================================*/
+.banner_section{
+	height: 150vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/*=====  End of HOME  ======*/
+
+/*========================================
+=                  FOOTER                =
+========================================*/
+.main_footer{
+	background-color: #222;
+}
+/*=====  End of FOOTER  ======*/
