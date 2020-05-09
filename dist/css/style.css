@@ -174,8 +174,8 @@ a{
 .is--fixed .nav_wrapper a:hover{
 	border-bottom-color: #b17e64;
 }
-
 /*=====  End of HEADER  ======*/
+
 
 /*========================================
 =                   HOME                 =
@@ -271,10 +271,10 @@ a{
 }
 .service_content p{
 	color: #ededed;
-	font-family: 'Cormorant SC', serif;
-	font-size: 15px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 16px;
 	margin-top: 20px;
-	font-weight: 300;
+	line-height: 1.4em;
 }
 .rooms_section{
 	height: 100vh;
@@ -305,6 +305,22 @@ a{
 	background-color: #b17e64;
 	padding: 10px 15px 8px 10px;
 	color: #fff;
+}
+.rooms_view{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+
+.rooms_view a{
+	background-color: #b17e64;
+	padding: 10px 15px 8px 10px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: table;
+    margin: 0 auto;
+    margin-top: 40px;
 }
 
 
