@@ -1,6 +1,6 @@
 # Web engineering project
 
-This project ...
+This is a group project for Web engineering subject in UBT.
 
 
 ## Usage

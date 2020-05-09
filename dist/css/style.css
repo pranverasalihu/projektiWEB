@@ -30,6 +30,83 @@ a{
 	width: 100%;
 	clear: both;
 }
+.row{
+	margin-left: -15px;
+	margin-right: -15px;
+	}
+.column-1{
+	float:left;
+	width: 8.333%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-2{
+	float:left;
+	width: 16.666%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-3{
+	float:left;
+	width: 25%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-4{
+	float:left;
+	width: 33.333%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-5{
+	float:left;
+	width: 41.6666%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-6{
+	float:left;
+	width: 50%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-7{
+	float:left;
+	width: 58.333%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-8{
+	float:left;
+	width: 66.666%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-9{
+	float:left;
+	width: 75%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-10{
+	float:left;
+	width: 83.333%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-11{
+	float:left;
+	width: 91.66%;
+	min-height:1px;
+	padding: 0 15px;
+}
+.column-12{
+	float:left;
+	width: 100%;
+	min-height:1px;
+	padding: 0 15px;
+}
+
 /*=====  End of GENERAL STYLE  ======*/
 /*========================================
 =                  HEADER                =
@@ -104,10 +181,34 @@ a{
 =                   HOME                 =
 ========================================*/
 .banner_section{
-	height: 150vh;
+	height: 100vh;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+}
+.banner_content{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.banner_content span{
+	font-size: 9em;
+    font-family: 'Dancing Script', cursive;
+    color: #fff;
+}
+.banner_heading h1{
+	color: #fff;
+	font-size: 6em;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 300;
 }
 
 
@@ -118,5 +219,73 @@ a{
 ========================================*/
 .main_footer{
 	background-color: #222;
+	height: 500px;
 }
+.logo_footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 20px;
+	border-bottom: 2px solid #b17e64;
+	padding-bottom: 10px;
+}
+.logo_footer a span{
+	font-size: 52px;
+	font-family: 'Dancing Script', cursive;
+	color: #b17e64;
+}
+.footer_title{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	
+}
+.footer_title h1{
+	font-size: 40px;
+	color: #b17e64;
+	font-family: 'Roboto', sans-serif;
+	padding-top: 40px;
+	margin-bottom: 50px;
+	font-weight: 300;
+}
+.footer_content a{
+	color: #b17e64;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.footer_content img{
+	height: 50px;
+	margin-bottom: 20px;
+	
+}
+.footer_socials{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	margin-top: 40px;
+	padding-right: 10px;
+}
+.footer_socials img{
+	height: 30px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+.footer_contact{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+.footer_contact a{
+	font-size: 15px;
+}
+.footer_copyright{
+	display: flex;
+	justify-content: center;
+	color: #b17e64;
+	margin-top: 40px;
+}
+
 /*=====  End of FOOTER  ======*/
