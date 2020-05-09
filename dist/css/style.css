@@ -270,11 +270,41 @@ a{
 	margin-bottom: 40px;
 }
 .service_content p{
-	color: #efefef;
-	font-family: 'Roboto', sans-serif;
+	color: #ededed;
+	font-family: 'Cormorant SC', serif;
 	font-size: 15px;
 	margin-top: 20px;
-	font-weight: 100;
+	font-weight: 300;
+}
+.rooms_section{
+	height: 100vh;
+	position: relative;
+}.rooms_title h1{
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	color: #b17e64;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 150px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #b17e64;
+	font-weight: 400;
+}
+.service_image{
+	margin-bottom: 10px;
+}
+.room_title h1{
+	float: left;
+	font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	padding-top: 10px;
+}
+.room_title a{
+	float: right;
+	background-color: #b17e64;
+	padding: 10px 15px 8px 10px;
+	color: #fff;
 }
 
 
