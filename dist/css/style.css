@@ -33,78 +33,80 @@ a{
 .row{
 	margin-left: -15px;
 	margin-right: -15px;
-	}
+}
+.has_gutter .column-1,
+.has_gutter .column-2,
+.has_gutter .column-3,
+.has_gutter .column-4,
+.has_gutter .column-5,
+.has_gutter .column-6,
+.has_gutter .column-7,
+.has_gutter .column-8,
+.has_gutter .column-9,
+.has_gutter .column-10,
+.has_gutter .column-11,
+.has_gutter .column-12{
+	padding: 0 15px;
+}
 .column-1{
 	float:left;
 	width: 8.333%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-2{
 	float:left;
 	width: 16.666%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-3{
 	float:left;
 	width: 25%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-4{
 	float:left;
 	width: 33.333%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-5{
 	float:left;
 	width: 41.6666%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-6{
 	float:left;
 	width: 50%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-7{
 	float:left;
 	width: 58.333%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-8{
 	float:left;
 	width: 66.666%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-9{
 	float:left;
 	width: 75%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-10{
 	float:left;
 	width: 83.333%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-11{
 	float:left;
 	width: 91.66%;
 	min-height:1px;
-	padding: 0 15px;
 }
 .column-12{
 	float:left;
 	width: 100%;
 	min-height:1px;
-	padding: 0 15px;
 }
 
 /*=====  End of GENERAL STYLE  ======*/
@@ -180,8 +182,8 @@ a{
 .is--fixed .nav_wrapper a:hover{
 	border-bottom-color: #b17e64;
 }
-
 /*=====  End of HEADER  ======*/
+
 
 /*========================================
 =                   HOME                 =
@@ -262,7 +264,7 @@ a{
 	color: #fff;
 	text-align: center;
 	margin-top: 50px;
-	margin-bottom: 150px;
+	margin-bottom: 130px;
 	padding-bottom: 15px;
 	border-bottom: 2px solid #fff;
 	font-weight: 400;
@@ -276,16 +278,131 @@ a{
 	margin-bottom: 40px;
 }
 .service_content p{
-	color: #efefef;
+	color: #ededed;
 	font-family: 'Roboto', sans-serif;
-	font-size: 15px;
+	font-size: 16px;
 	margin-top: 20px;
-	font-weight: 100;
+	line-height: 1.4em;
 }
-
-
-
+.service_image{
+	margin-bottom: 10px;
+}
+.rooms_section{
+	height: 100vh;
+	position: relative;
+}
+.rooms_title h1{
+	font-size: 50px;
+	font-family: 'Roboto', sans-serif;
+	color: #b17e64;
+	text-align: center;
+	margin-top: 50px;
+	margin-bottom: 130px;
+	padding-bottom: 15px;
+	border-bottom: 2px solid #b17e64;
+	font-weight: 400;
+}
+.room_title h1{
+	float: left;
+	font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+	padding-top: 10px;
+}
+.room_title a{
+	float: right;
+	background-color: #b17e64;
+	padding: 10px 15px 8px 10px;
+	color: #fff;
+}
+.rooms_view{
+	float: left;
+	width: 100%;
+	text-align: center;
+}
+.rooms_view a{
+	background-color: #b17e64;
+	padding: 10px 15px 8px 10px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	display: table;
+    margin: 0 auto;
+    margin-top: 100px;
+}
 /*=====  End of HOME  ======*/
+
+/*========================================
+=                  SERVICES                =
+========================================*/
+.left_section{
+	height: 65vh;
+	position: relative;
+	background-color: #222;
+	overflow: hidden;
+}
+.left_image{
+	float: left;
+    height: 100%;
+}
+.left_image img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.left_content{
+	margin-top: 130px;
+	margin-left: 60px;
+	padding-right: 10px;
+}
+.left_title h1{
+	font-size: 35px;
+    color: #b17e64;
+    font-family: 'Cormorant SC', serif;
+	font-weight: 300;
+}
+.left_paragraph p{
+	color: #bfbfbf;
+	font-family: 'Cormorant SC', serif;
+	font-size: 15px;
+	margin-top: 40px;
+	line-height: 1.5em;
+	text-transform: uppercase;
+}
+.right_section{
+	height: 65vh;
+	position: relative;
+	overflow: hidden;
+}
+.right_image{
+	float: left;
+    height: 100%;
+}
+.right_image img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right_content{
+	margin-top: 130px;
+	margin-left: 60px;
+	padding-right: 10px;
+}
+.right_title h1{
+	font-size: 35px;
+    color: #b17e64;
+    font-family: 'Cormorant SC', serif;
+	font-weight: 300;
+}
+.right_paragraph p{
+	color: #7F7E7E;
+	font-family: 'Cormorant SC', serif;
+	font-size: 15px;
+	margin-top: 40px;
+	line-height: 1.4em;
+	text-transform: uppercase;
+}
+/*=====  End of SERVICES ======*/
 
 /*========================================
 =                  CONTACT                =

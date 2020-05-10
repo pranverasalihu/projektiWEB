@@ -1,0 +1,77 @@
+/* Mobile media query */
+@media only screen and (max-width: 767px){
+    .container {
+        padding: 0 15px;
+    }
+    .column-mob-1{
+        float:left;
+        width: 8.333%;
+        min-height:1px;
+    }
+    .column-mob-2{
+        float:left;
+        width: 16.666%;
+        min-height:1px;
+    }
+    .column-mob-3{
+        float:left;
+        width: 25%;
+        min-height:1px;
+    }
+    .column-mob-4{
+        float:left;
+        width: 33.333%;
+        min-height:1px;
+    }
+    .column-mob-5{
+        float:left;
+        width: 41.6666%;
+        min-height:1px;
+    }
+    .column-mob-6{
+        float:left;
+        width: 50%;
+        min-height:1px;
+    }
+    .column-mob-7{
+        float:left;
+        width: 58.333%;
+        min-height:1px;
+    }
+    .column-mob-8{
+        float:left;
+        width: 66.666%;
+        min-height:1px;
+    }
+    .column-mob-9{
+        float:left;
+        width: 75%;
+        min-height:1px;
+    }
+    .column-mob-10{
+        float:left;
+        width: 83.333%;
+        min-height:1px;
+    }
+    .column-mob-11{
+        float:left;
+        width: 91.66%;
+        min-height:1px;
+    }
+    .column-mob-12{
+        float:left;
+        width: 100%;
+        min-height:1px;
+    }
+    .services_section{
+        height: auto;
+    }
+}
+/* Tablet media query */
+@media only screen and (max-width: 990px) and (min-width: 768px){
+    
+}
+/* BIG Tablet media query */
+@media only screen and (max-width: 1199px) and (min-width: 991px){
+    
+}

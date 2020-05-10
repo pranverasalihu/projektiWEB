@@ -8,11 +8,14 @@ This is a group project for Web engineering subject in UBT!
 ```
 #html
     index.html 
+    services.html
+    
 
 dist/ #all source 
     css/ #css folder
         style.css #main style
         reset.css #style for reset browser css
+        responsive.css
 
     js/ #js folder
         jquery-1.12.4.js #JQuery JS library
