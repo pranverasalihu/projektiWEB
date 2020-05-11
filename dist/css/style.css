@@ -536,10 +536,14 @@ a{
 /*===== About Us =====*/
 
 
+/*========================================
+=                  ROOMS               =
+========================================*/
 
 .rooms_img{
 	width: 90%;
 	padding-left: 15px;
+	padding-bottom: 20px;
 }
 
 .rooms_content{
@@ -569,7 +573,7 @@ a{
 	padding-left: 10px;
 	width: 30%; 
 	float: right;
-	font-size: 30px;
+	font-size: 40px;
 }
 .rooms_products{
 	padding-left: 10px;
@@ -588,6 +592,8 @@ a{
     height: 100%;
 
 }
+
+/*===== ROOMS =====*/
 
 
 
