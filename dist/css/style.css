@@ -24,6 +24,10 @@ a{
 	width: 100%;
 	display: block;
 	margin: 0 auto;
+<<<<<<< HEAD
+=======
+	padding: 0 15px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 }
 .block_section{
 	float: left;
@@ -182,6 +186,15 @@ a{
 .is--fixed .nav_wrapper a:hover{
 	border-bottom-color: #b17e64;
 }
+<<<<<<< HEAD
+=======
+.nav_wrapper a.active{
+	border-bottom-color: #fff;
+}
+.is--fixed .nav_wrapper a.active{
+	border-bottom-color: #b17e64;
+}
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 /*=====  End of HEADER  ======*/
 
 
@@ -219,8 +232,14 @@ a{
 	font-weight: 300;
 }
 .about_section{
+<<<<<<< HEAD
 	height: 100vh;
 	position: relative;
+=======
+	height: auto;
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 }
 .border_title{
 	display: flex;
@@ -254,9 +273,16 @@ a{
 	line-height: initial;
 }
 .services_section{
+<<<<<<< HEAD
 	height: 100vh;
 	position: relative;
 	background-color: #222;
+=======
+	position: relative;
+	background-color: #222;
+	height: auto;
+    padding-bottom: 50px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 }
 .services_title h1{
 	font-size: 50px;
@@ -265,8 +291,11 @@ a{
 	text-align: center;
 	margin-top: 50px;
 	margin-bottom: 130px;
+<<<<<<< HEAD
 	padding-bottom: 15px;
 	border-bottom: 2px solid #fff;
+=======
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 	font-weight: 400;
 }
 .service_title h1{
@@ -288,8 +317,13 @@ a{
 	margin-bottom: 10px;
 }
 .rooms_section{
+<<<<<<< HEAD
 	height: 100vh;
 	position: relative;
+=======
+	position: relative;
+	padding-bottom: 30px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 }
 .rooms_title h1{
 	font-size: 50px;
@@ -297,9 +331,13 @@ a{
 	color: #b17e64;
 	text-align: center;
 	margin-top: 50px;
+<<<<<<< HEAD
 	margin-bottom: 130px;
 	padding-bottom: 15px;
 	border-bottom: 2px solid #b17e64;
+=======
+	margin-bottom: 120px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 	font-weight: 400;
 }
 .room_title h1{
@@ -331,6 +369,7 @@ a{
     margin-top: 100px;
 }
 /*=====  End of HOME  ======*/
+<<<<<<< HEAD
 
 /*========================================
 =                  SERVICES                =
@@ -410,6 +449,8 @@ a{
 /*=====  End of CONTACT ======*/
 
 
+=======
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 /*========================================
 =                  FOOTER                =
 ========================================*/
@@ -483,6 +524,7 @@ a{
 	color: #b17e64;
 	margin-top: 40px;
 }
+<<<<<<< HEAD
 
 /*=====  End of FOOTER  ======*/
 
@@ -495,6 +537,9 @@ a{
 }
 
 .aboutUs .seperator{
+=======
+.seperator{
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 	position: relative;
 	margin-top: 60px;
 	display: flex;
@@ -503,6 +548,7 @@ a{
 	border-bottom: 2px solid #b17e64;
 	padding-bottom: 10px;
 }
+<<<<<<< HEAD
 
 .aboutUs .seperator span{
 	position: absolute;
@@ -510,11 +556,22 @@ a{
     background-color: white;
 	padding: 0 20px;
 
+=======
+.white.seperator span{
+    background-color: #fff;
+}
+.seperator span{
+	position: absolute;
+    bottom: -28px;
+    background-color: #222222;
+	padding: 0 20px;
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 	font-size: 52px;
 	font-family: 'Dancing Script', cursive;
 	color: #b17e64;
 }
 
+<<<<<<< HEAD
 .aboutUs #footer .seperator span{
 	background-color: #222222;
 }
@@ -595,6 +652,85 @@ a{
 
 /*===== ROOMS =====*/
 
+=======
+/*=====  End of FOOTER  ======*/
+/*========================================
+=                  SERVICES                =
+========================================*/
+.left_section{
+	position: relative;
+	background-color: #222;
+	overflow: hidden;
+}
+.left_image{
+	float: left;
+    height: 100%;
+}
+.left_image img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.left_content{
+	margin-top: 130px;
+	margin-left: 60px;
+	padding-right: 10px;
+}
+.left_title h1{
+	font-size: 35px;
+    color: #b17e64;
+    font-family: 'Cormorant SC', serif;
+	font-weight: 300;
+}
+.left_paragraph p{
+	color: #bfbfbf;
+	font-family: 'Cormorant SC', serif;
+	font-size: 15px;
+	margin-top: 40px;
+	line-height: 1.5em;
+	text-transform: uppercase;
+}
+.right_section{
+	position: relative;
+	overflow: hidden;
+}
+.right_image{
+	float: left;
+    height: 100%;
+}
+.right_image img{
+	width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.right_content{
+	margin-top: 130px;
+	margin-left: 60px;
+	padding-right: 10px;
+}
+.right_title h1{
+	font-size: 35px;
+    color: #b17e64;
+    font-family: 'Cormorant SC', serif;
+	font-weight: 300;
+}
+.right_paragraph p{
+	color: #7F7E7E;
+	font-family: 'Cormorant SC', serif;
+	font-size: 15px;
+	margin-top: 40px;
+	line-height: 1.4em;
+	text-transform: uppercase;
+}
+/*=====  End of SERVICES ======*/
+
+/*===== About Us =====*/
+
+.aboutUs_image img{
+	box-shadow: 10px 10px 40px 5px rgba(0,0,0,0.5);
+	width: 90%;
+}
+>>>>>>> 5ce3eeef58e7d895b9f892ec22abfdf92c5d7864
 
 
 
