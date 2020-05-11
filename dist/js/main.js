@@ -12,7 +12,6 @@
         $header.addClass('loaded');
         //Header scroll animation
         $doc.scroll(function() {
-            console.log($header.outerHeight(), $doc.scrollTop());
 
             if ($doc.scrollTop() >= $headerContent.outerHeight() - $header.outerHeight()) {
                 $header.addClass('is--fixed');

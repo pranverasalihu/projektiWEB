@@ -1058,15 +1058,15 @@ a{
 	width: 30%; 
 	float: right;
 	font-size: 40px;
-	padding-bottom: 15px;
 }
 .rooms_products{
+	padding-left: 10px;
     margin-top: 20px;
     display: block;
 }
 .rooms_products a{
 	color: rgb(206, 158, 133);
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 .top_rooms{
     background-color: #222;
@@ -1082,5 +1082,25 @@ a{
 }
 
 
-
 /*===== ROOMS =====*/
+/*Contact*/
+.contact_content{
+	color: #7F7E7E;
+	max-width: 1000px;
+	margin:auto;
+	padding: 90px 40px 80px 40px;
+	font-style: italic;	
+	line-height: 1.5;
+}
+
+.contact_line { 
+	margin-left: 250px;
+	margin-right: 250px; 
+	border-top: 1px #222 ;
+}
+
+.contact_form{
+	margin-left:450px;
+	margin-right:400px;
+	margin-bottom:500px;
+}

@@ -5,14 +5,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
         <title>Vanoa</title>
-        <link rel = "icon" type = "image/ico" href = "./dist/images/vanoa-icon.ico">
         <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dist/css/reset.css">
         <link rel="stylesheet" href="dist/css/style.css">
     </head>
     <body class="aboutUs">
         <!-- BEGIN HEADER -->
-        <header id="header" class="main_header">
+        <header id="header" class="main_header loaded is--fixed">
             <div class="container">
                 <div class="headerWrap">
                     <div class="logo_header">
@@ -33,10 +32,10 @@
                                 <a href="services.html">Services</a>
                             </li>
                             <li>
-                                <a href="about.html" class="">About</a>
+                                <a href="about.html" >About</a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="contact.html"class="active">Contact</a>
                             </li>
                         </ul>
                     </nav>
@@ -45,47 +44,60 @@
         </header>
         <main id="main" class="main_content">
             <div class="mainWrap">
-                <section class="block_section banner_section" style="background-image: url('dist/images/about.jpg');">
-                    <div class="banner_content">
-                        <div class="banner_logo">
-                            <span>V</span>
-                        </div>
-                        <div class="banner_heading">
-                            <h1>VANOA</h1>
-                        </div>
-                    </div>
+                <!--  -->
+                <section class="block_section about_section">
+                    <div id="map" style="width:100%; height: 400px; margin-top:80px;"></div>
+                    <script>
+                      var map;
+                      function initMap() {
+                        map = new google.maps.Map(document.getElementById('map'), {
+                          center: {lat: -34.397, lng: 150.644},
+                          zoom: 8
+                        });
+                      }
+                    </script>
+                    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+                    async defer></script>
+                  
+                    <div class="container">
+                        <div class="footerWrap">
+                            <div class="logo_footer white seperator">
+                                <!-- <a href="index.html">
+                                    
+                                </a> -->
+                                
+                                <span>V</span>
+                            
+                            </div>
+                            
+                            <p class="contact_content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
+                            <hr class="contact_line"></div></hr>
                 </section>
                 <section class="block_section about_section">
-                    <div class="container">
-                        <div class="border_title seperator white">
-                            <span>V</span>
-                        </div>
-                        <div class="row has_gutter">
-                            <div class="column-6">
-                                <div class="aboutUs_image">
-                                    <img src="./dist/images/aboutUs_hotel.jpg" alt="">
-                                </div>
-                            </div>
-                            <div class="column-6">
-                                <div class="about_title">
-                                    <h1>About Us</h1>
-                                </div>
-                                <div class="about_content">
-                                    <p>The four-star Europa Hotel is a jewel of the 19th century architecture, located in the strict centre of Lublin, at Krakowskie Przedmieście Street. Because of our prestigious location, we have already for 150 years been a perfect haven both for people travelling for tourist, as well as business purposes.
-                                        We have 72 comfortably equipped rooms, including two suites: The President Suite and the Ambassador Suite, with over one hundred metres of surface area, which are sure to awe even the most demanding Guests. We offer 7 rooms, where we have been preparing family and business meetings already for 15 years. 
-                                        The Europa Hotel is not merely the building but, above all, its people. We are a team of professionals, who can organise every event end-to-end.
-                                        We have many years of experience, extensive conference facilities, as well as technical and catering equipment, and we will be more than happy to organise your meeting – both in our building, in a tent at the hotel's patio, as well as in any other place of your choosing.</p>
-                                </div>
-                            </div>
-                        </div> 
-                    </div>
-                </section>
+                    <div class="contact_form">
+                        
+                    <form >
+                        <label>Name</label>
+                        <input>
+                        <label>Email</label>
+                        <input>
+                        <br><label>Subject</label>
+                        <input>
+                        <br><label>Meassage</label>
+                        <input>
+                    </form>
                 
+                </div>
+                </section>
+               
                 <!--footer-->
                  <footer id="footer" class="main_footer">
             <div class="container">
                 <div class="footerWrap">
                     <div class="logo_footer seperator">
+                        <!-- <a href="index.html">
+                            
+                        </a> -->
                         <span>V</span>
                     </div>
                     <div class="footer_title">
@@ -142,6 +154,7 @@
         <!-- SCRIPTS -->
         <script src="dist/js/jquery-1.12.4.js"></script>
         <script src="dist/js/main.js"></script>
+        
     </body>
-</html>
 
+</html>
