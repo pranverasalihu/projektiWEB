@@ -1062,6 +1062,7 @@ a{
 }
 .rooms_products{
     margin-top: 20px;
+    display: block;
 }
 .rooms_products a{
 	color: rgb(206, 158, 133);
@@ -1076,6 +1077,10 @@ a{
     height: 100%;
 
 }
+.products_title{
+	box-sizing: border-box;
+}
+
 
 
 /*===== ROOMS =====*/
