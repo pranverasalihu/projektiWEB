@@ -9,6 +9,9 @@ This is a group project for Web engineering subject in UBT!
 #html
     index.html 
     services.html
+    rooms.html
+    about.html
+    masterSuit.html
     
 
 dist/ #all source 
