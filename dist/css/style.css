@@ -1029,6 +1029,8 @@ a{
 	float: left; 
 	margin-top: 50px;
     overflow: hidden;
+    border-bottom: solid rgb(206, 158, 133);
+    border-width: 1px;
 }
 .rooms_img{
 	width: 90%;
