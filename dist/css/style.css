@@ -625,3 +625,10 @@ a{
 	display:flex;
 	margin-top:20px;
 }
+
+.contact_button{
+	background-color: #b17e64;
+	color:white;
+	padding:8px 235px;
+	border:none;
+}
