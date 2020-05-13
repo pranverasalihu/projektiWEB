@@ -106,7 +106,8 @@
     }
     .about_image{
         margin-bottom: 60px;
-    }.about_image img{
+    }
+    .about_image img{
         width: 70%;
         margin-left: 50px;
     }
@@ -171,6 +172,9 @@
         padding-bottom: 0;
         margin-bottom: 30px;
     }
+
+
+    
 
 }
 /* Tablet media query */

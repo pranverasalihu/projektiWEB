@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="dist/css/style.css">
         <link rel="stylesheet" href="dist/css/responsive.css">
     </head>
-    <body class="aboutUs">
+    <body class="contactUs">
         <!-- BEGIN HEADER -->
         <header id="header" class="main_header loaded is--fixed">
             <div class="container">
@@ -31,7 +31,11 @@
                                 <a href="index.html">Home</a>
                             </li>
                             <li>
+
+                                <a href="rroms.html">Rooms</a>
+
                                 <a href="rooms.html">Rooms</a>
+
                             </li>
                             <li>
                                 <a href="services.html">Services</a>
@@ -50,7 +54,7 @@
         <main id="main" class="main_content">
             <div class="mainWrap">
                 <!--  -->
-                <section class="block_section about_section">
+                <section class="block_section contact_section">
                     <div id="map" style="width:100%; height: 400px; margin-top:80px;"></div>
                     <script>
                       var map;
@@ -78,21 +82,42 @@
                             <p class="contact_content">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.</p>
                             <hr class="contact_line"></div></hr>
                 </section>
-                <section class="block_section about_section">
-                    <div class="contact_form">
-                        
-                    <form >
-                        <label>Name</label>
-                        <input>
-                        <label>Email</label>
-                        <input>
-                        <br><label>Subject</label>
-                        <input>
-                        <br><label>Meassage</label>
-                        <input>
+                <section class="block_section contact_section">
+                    
+                    <form class="contact_form has_gutter">
+                        <div class="row">
+                            <div class="column-6">
+                                <label class="">Name</label>
+                                <input type="text">
+                            </div>
+                            <div class="column-6">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column-12">
+                                <label>Subject</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="column-12">
+                                <label>Meassage</label>
+                                <textarea rows="3"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="column-12">
+                                
+                                <button class="contact_button">Send</button>
+                                
+                            </div>
+                            
+                        </div>
                     </form>
                 
-                </div>
                 </section>
                
                 <!--footer-->
