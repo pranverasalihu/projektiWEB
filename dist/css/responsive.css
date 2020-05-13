@@ -104,6 +104,12 @@
         float: right;
         width: 30px;
     }
+    .about_image{
+        margin-bottom: 60px;
+    }.about_image img{
+        width: 70%;
+        margin-left: 50px;
+    }
     
 }
 /* Tablet media query */
