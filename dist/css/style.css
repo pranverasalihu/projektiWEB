@@ -652,4 +652,10 @@ a{
 	color:white;
 	padding:8px 235px;
 	border:none;
+	cursor: pointer;
+	transition: background-color 100ms;
+}
+
+.contact_button:hover{
+	background-color: #736158;
 }
