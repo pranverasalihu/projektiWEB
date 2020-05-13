@@ -320,6 +320,10 @@ a{
 .rooms_section{
 	position: relative;
 	padding-bottom: 30px;
+	 display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 .rooms_title h1{
 	font-size: 50px;
@@ -831,6 +835,7 @@ a{
 .rooms_section{
 	position: relative;
 	padding-bottom: 30px;
+	height: auto;
 }
 .rooms_title h1{
 	font-size: 50px;
@@ -1119,6 +1124,8 @@ a{
     width: 80%;
     height: 100%;
 }
+
+
 
 
 /*===== ROOMS =====*/
