@@ -12,13 +12,17 @@
         $header.addClass('loaded');
         //Header scroll animation
         $doc.scroll(function() {
-
             if ($doc.scrollTop() >= $headerContent.outerHeight() - $header.outerHeight()) {
                 $header.addClass('is--fixed');
             } else {
                 $header.removeClass('is--fixed');
             }
         });
+        
+        $('.hamburger').on('click',function(e){
+            $('.nav_wrapper').toggleClass('is--toggled')
+        })
 
+        
     });
 }(window.jQuery, window, document));
