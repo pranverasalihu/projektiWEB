@@ -118,6 +118,16 @@
         margin-top: 50px;
         margin-bottom: 50px;
     }
+    .rooms_title h1{
+        font-size: 30px;
+        margin-bottom: 50px;
+    }
+    .room_title {
+        margin-bottom: 80px;
+    }
+    .rooms_view a{
+        margin-top: 20px;
+    }
     
 }
 /* Tablet media query */
