@@ -176,7 +176,115 @@
 }
 /* Tablet media query */
 @media only screen and (max-width: 990px) and (min-width: 768px){
-    
+    .container {
+        padding: 0 15px;
+    }
+    .column-mob-1{
+        float:left;
+        width: 8.333%;
+        min-height:1px;
+    }
+    .column-mob-2{
+        float:left;
+        width: 16.666%;
+        min-height:1px;
+    }
+    .column-mob-3{
+        float:left;
+        width: 25%;
+        min-height:1px;
+    }
+    .column-mob-4{
+        float:left;
+        width: 33.333%;
+        min-height:1px;
+    }
+    .column-mob-5{
+        float:left;
+        width: 41.6666%;
+        min-height:1px;
+    }
+    .column-mob-6{
+        float:left;
+        width: 50%;
+        min-height:1px;
+    }
+    .column-mob-7{
+        float:left;
+        width: 58.333%;
+        min-height:1px;
+    }
+    .column-mob-8{
+        float:left;
+        width: 66.666%;
+        min-height:1px;
+    }
+    .column-mob-9{
+        float:left;
+        width: 75%;
+        min-height:1px;
+    }
+    .column-mob-10{
+        float:left;
+        width: 83.333%;
+        min-height:1px;
+    }
+    .column-mob-11{
+        float:left;
+        width: 91.66%;
+        min-height:1px;
+    }
+    .column-mob-12{
+        float:left;
+        width: 100%;
+        min-height:1px;
+    }
+     .main_header{
+        height: 70px;
+        padding: 10px 0;
+    }
+    .main_header.is--fixed {
+        background-color: #fff;
+        height: 70px;
+    }
+    .nav_wrapper{
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 70px;
+        background: #222;
+        border-top: 1px solid #fff;
+        padding-top: 20px;
+    }
+    .nav_wrapper li{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+    .nav_wrapper li a {
+        height: auto;
+    }
+    .is--toggled.nav_wrapper{
+        display: block;
+        width: 100%;
+    }
+    .border_title{
+        margin-bottom: 100px;
+    }
+    .hamburger{
+        display: block;
+        float: right;
+        width: 40px;
+    }
+    .about_image{
+        margin-bottom: 90px;
+    }
+    .about_image img{
+        width: 80%;
+        margin-left: 50px;
+    }
 }
 /* BIG Tablet media query */
 @media only screen and (max-width: 1199px) and (min-width: 991px){
