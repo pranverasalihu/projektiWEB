@@ -128,7 +128,15 @@
     .rooms_view a{
         margin-top: 20px;
     }
-    
+    .footer_content a{
+        font-size: 13px;
+    }
+    .footer_content img{
+        height: 30px;
+    }
+    .footer_socials img{
+        height: 30px;
+    }
 }
 /* Tablet media query */
 @media only screen and (max-width: 990px) and (min-width: 768px){
