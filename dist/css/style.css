@@ -189,6 +189,29 @@ a{
 .is--fixed .nav_wrapper a.active{
 	border-bottom-color: #b17e64;
 }
+.hamburger{
+	display: none;
+	float: right;
+	width: 30px;
+}
+.hamburger span{
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	float: left;
+	margin-bottom: 7px;
+}
+.hamburger span:last-child{
+	margin-bottom: 0;
+}
+.is--fixed .hamburger span{
+	background-color:#b17e64;
+	width: 100%;
+	height: 2px;
+	float: left;
+	margin-bottom: 7px;
+}
+
 /*=====  End of HEADER  ======*/
 
 
