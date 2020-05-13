@@ -320,10 +320,8 @@ a{
 .rooms_section{
 	position: relative;
 	padding-bottom: 30px;
-	 display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+	display: flex;
+
 }
 .rooms_title h1{
 	font-size: 50px;
@@ -1055,6 +1053,7 @@ a{
 .rooms{
 	width: 70%; 
 	float: left; 
+	padding-right: 12px;
 	margin-top: 50px;
     overflow: hidden;
     border-bottom: solid rgb(206, 158, 133);
@@ -1123,6 +1122,9 @@ a{
     padding: 25px 10px 60px 40px; 
     width: 80%;
     height: 100%;
+}
+@media only screen and (min-width: 375){
+
 }
 
 

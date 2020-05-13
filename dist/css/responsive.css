@@ -106,7 +106,8 @@
     }
     .about_image{
         margin-bottom: 60px;
-    }.about_image img{
+    }
+    .about_image img{
         width: 70%;
         margin-left: 50px;
     }
@@ -161,6 +162,26 @@
     .right_paragraph p{
         margin-top: 20px;
         font-size: 12px;
+    }
+
+
+    .rooms_img{
+        width: 100%;
+    }
+
+    .rooms_sidebar{
+        width: 100%;
+        bottom: 10px;
+        display: flex;
+        padding-right: 10px;
+        margin-right: 5px;
+    }
+    .rooms{
+        width: 100%;  
+        margin-top: 20px;
+        overflow: hidden;
+        border-bottom: solid rgb(206, 158, 133);
+        border-width: 1px;
     }
 
 }
