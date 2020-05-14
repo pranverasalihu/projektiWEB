@@ -147,7 +147,7 @@
     .left_title h1{
         font-size: 30px;
     }
-    .left_paragraph p{
+    .left_paragraph p {
         margin-top: 20px;
         font-size: 12px;
     }
@@ -349,7 +349,7 @@
     }
     .left_paragraph p{
         margin-top: 20px;
-        font-size: 12px;
+        font-size: 18px;
     }
     .right_content{
         margin-top: 20px;
@@ -361,7 +361,29 @@
     }
     .right_paragraph p{
         margin-top: 20px;
-        font-size: 12px;
+        font-size: 18px;
+    }
+    .aboutUs_image img {
+        margin-left: 35px;
+        margin-bottom: 40px;
+    }
+    .about_section{
+        padding-bottom: 0;
+        margin-bottom: 30px;
+    }
+    .about_title h1 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 40px;
+        color: #b3430b;
+        margin-bottom: 20px;
+        font-weight: 300;
+        padding-left: 30px;
+    }
+    .about_content {
+        color: #7F7E7E;
+        font-size: 20px;
+        padding-left: 30px;
+        line-height: initial;
     }
 }
 /* BIG Tablet media query */
