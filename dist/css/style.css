@@ -557,9 +557,8 @@ a{
 	color: #7F7E7E;
 	font-size: 15px;
 	line-height: initial;
-	padding-left: 10px;
 	overflow: hidden;
-	padding-top: 15px;
+	padding-top: 25px;
 }
 .rooms_sidebar{
     width: 30%; 
@@ -574,6 +573,7 @@ a{
 .rooms_price{
 	color: rgb(206, 158, 133);
     float: right;
+    padding-top: 10px;
 }
 .rooms_price li span{
 	color: #fff;
@@ -581,11 +581,13 @@ a{
 .rooms_price_span{
 	color:  #333333;
 }
+.rooms_title{
+	padding-top: 10px;
+}
 .rooms_title a{
 	font-family: 'Roboto', sans-serif;
 	font-size: 25px;
 	font-weight: 300;
-	padding-left: 10px;
 }
 .rooms_title span{
 	font-family: 'Roboto', sans-serif;
