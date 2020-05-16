@@ -72,27 +72,27 @@
                         </div>
                 </section>
                 <section class="block_section contact_section">
-                    <form class="contact_form has_gutter">
+                    <form class="contact_form has_gutter" id="contact_form" action="contact.html" method="POST">
                         <div class="row">
-                            <div class="column-6">
+                            <div class="column-6 nameContainer">
                                 <label class="">Name</label>
-                                <input type="text">
+                                <input type="text" id="name">
                             </div>
-                            <div class="column-6">
+                            <div class="column-6 emailContainer">
                                 <label>Email</label>
-                                <input type="email">
+                                <input type="email" id="email">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="column-12">
+                            <div class="column-12 subjectContainer">
                                 <label>Subject</label>
-                                <input type="text">
+                                <input type="text" id="subject">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="column-12">
+                            <div class="column-12 messageContainer">
                                 <label>Message</label>
-                                <textarea rows="3"></textarea>
+                                <textarea rows="3" id="message"></textarea>
                             </div>
                         </div>
                         <div class="row">
