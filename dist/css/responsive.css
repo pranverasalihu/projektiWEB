@@ -254,6 +254,7 @@
         width: 100%;
         min-height:1px;
     }
+    /* HEADER */
      .main_header{
         height: 80px;
         padding: 10px 0;
@@ -293,6 +294,8 @@
         float: right;
         width: 40px;
     }
+    /* END OF HEADER */
+    /* hOME PAGE */
     .about_image{
         margin-bottom: 90px;
     }
@@ -344,6 +347,8 @@
         margin-top: 30px;
         font-size: 25px;
     }
+    /* END OF HOME PAGE*/
+    /* FOOTER */
     .footer_content a{
         font-size: 13px;
     }
@@ -353,6 +358,7 @@
     .footer_socials img{
         height: 30px;
     }
+    /* END OF FOOTER */
     /* Service */
     .left_content{
         margin-top: 20px;
@@ -378,6 +384,8 @@
         margin-top: 20px;
         font-size: 18px;
     }
+    /* END OF SERVICE */
+    /* ABOUT */
     .aboutUs_image img {
         margin-left: 35px;
         margin-bottom: 40px;
@@ -398,12 +406,16 @@
         color: #7F7E7E;
         font-size: 20px;
         padding-left: 30px;
+      
         line-height: initial;
     }
+    /* END OF ABOUT */
+    /* CONTACT */
     .contact_line {
         margin-left: 100px;
         margin-right: 100px;
     }
+    /* END OF CONTACT */
 }
 /* BIG Tablet media query */
 @media only screen and (max-width: 1199px) and (min-width: 991px){
