@@ -617,11 +617,6 @@ a{
 .contactUs .contact_section{
 	margin-bottom:50px;
 }
-
-.contactUs #footer{
-	margin-top:50px;
-}
-
 .contact_content{
 	color: #7F7E7E;
 	max-width: 1000px;
@@ -678,6 +673,7 @@ a{
 	border:none;
 	cursor: pointer;
 	transition: background-color 100ms;
+	margin-bottom:50px;
 }
 
 .contact_button:hover{
