@@ -118,14 +118,9 @@ a{
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	z-index: 9;
-	top:-120px;
 	height: 110px;
 	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
-	transition: all 0.3 cubic-bezier(0.3, 0, 0.2, 1);
-}
-
-.main_header.loaded{
-	top:0;
+	transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
 }
 
 .main_header.is--fixed{
