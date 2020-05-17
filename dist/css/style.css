@@ -118,14 +118,9 @@ a{
 	background-color: rgba(0,0,0,0.4);
 	position: fixed;
 	z-index: 9;
-	top:-120px;
 	height: 110px;
 	-webkit-transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
-	transition: all 0.3 cubic-bezier(0.3, 0, 0.2, 1);
-}
-
-.main_header.loaded{
-	top:0;
+	transition: all 0.3s cubic-bezier(0.3, 0, 0.2, 1);
 }
 
 .main_header.is--fixed{
@@ -341,7 +336,7 @@ a{
 .room_title a{
 	float: right;
 	background-color: #b17e64;
-	padding: 10px 15px 8px 10px;
+	padding: 10px 12px 8px 10px;
 	color: #fff;
 }
 .rooms_view{
@@ -351,7 +346,7 @@ a{
 }
 .rooms_view a{
 	background-color: #b17e64;
-	padding: 10px 15px 8px 10px;
+	padding: 10px 12px 8px 10px;
 	color: #fff;
 	font-size: 16px;
 	text-align: center;
@@ -546,6 +541,8 @@ a{
     overflow: hidden;
     border-bottom: solid rgb(206, 158, 133);
     border-width: 1px;
+
+    
 }
 .rooms_img{
 	width: 90%;
@@ -558,6 +555,7 @@ a{
 	line-height: initial;
 	overflow: hidden;
 	padding-top: 25px;
+	width: 100%;
 }
 .rooms_sidebar{
     width: 30%; 
