@@ -681,3 +681,27 @@ a{
 .contact_button:hover{
 	background-color: #736158;
 }
+
+/*=====LOGIN=====*/
+
+.login_body{
+	margin:0px;
+	padding:0;
+	font-family:sans-serif;
+	background:url(logIn.jpg) no-repeat;
+	background-size: cover	;
+}
+
+.login_box{
+	width:280px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	bottom:50%;	
+	transform:translate(-50%,-50%);
+	color:white;
+}
+
+	
+	
+	
