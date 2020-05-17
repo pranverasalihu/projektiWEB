@@ -196,9 +196,9 @@
 
     .rooms_sidebar{
         width: 100%;
-        bottom: 10px;=
+        bottom: 10px;
         padding-right: 10px;
-        margin-right: 5px;
+        margin-right: 10px;
     }
     .rooms{
         width: 100%;  
@@ -210,11 +210,7 @@
     .room_title a{
         margin-bottom: 10px;
     }
-    .rooms_reservation p{
-        font-size: 19.8px;
-        float: right;
-        
-    }
+      
     /* END OF ROOMS */
     
 

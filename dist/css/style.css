@@ -609,14 +609,18 @@ a{
     width: 80%;
     height: 100%;
 }
-.rooms_reservation p{
+.rooms_reservation{
 	font-size: 20px;
-    padding-top: 30px;
-    margin-bottom: -15px;
     text-align: center;
-    border-bottom: solid rgb(206, 158, 133);
-    border-width: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
+.rooms_reservation p{
+	border-top: solid rgb(206, 158, 133);
+    border-width: 1px;
+    padding-top: 10px;
+}
+
     
 }
 /*===== ROOMS =====*/
@@ -752,7 +756,7 @@ html, body{
 }
 .login_box input {
 	border: 1px solid rgba(0,0,0,0.2);
-	boder-top:0px;
+	border-top:0px;
 	border-left: 0px;
 	border-right: 0px;
 	border-top:0px;
