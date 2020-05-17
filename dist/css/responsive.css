@@ -420,4 +420,31 @@
 /* BIG Tablet media query */
 @media only screen and (max-width: 1199px) and (min-width: 991px){
     
+    /* HOME PAGE */
+    .about_image{
+        padding-top: 35px;
+    }
+    .about_image img{
+        margin-left: 32px;
+    }
+    .services_title h1{
+        margin-bottom: 100px;
+    }
+    .rooms_title h1{
+        margin-bottom: 100px;
+    }
+    /* END OF HOME PAGE */
+    /* SERVICES */
+    .left_content{
+        margin-top: 60px;
+    }
+    .left_paragraph p{
+        font-size: 12px;
+    }
+    .right_content{
+        margin-top: 60px;
+    }
+    .right_paragraph p{
+        font-size: 12px;
+    }
 }
