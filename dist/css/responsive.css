@@ -207,6 +207,10 @@
         border-bottom: solid rgb(206, 158, 133);
         border-width: 1px;
     }
+    .room_title a{
+        margin-bottom: 10px;
+    }
+    
 
 
 
