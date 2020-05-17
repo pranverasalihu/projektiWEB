@@ -741,7 +741,11 @@ html, body{
 	margin-top:100px;
 }
 .login_box input {
-    border: 1px solid rgba(0,0,0,0.2);
+	border: 1px solid rgba(0,0,0,0.2);
+	boder-top:0px;
+	border-left: 0px;
+	border-right: 0px;
+	border-top:0px;
     padding: 7px 10px;
     outline: none;
 	margin-top: 5px;
@@ -758,16 +762,21 @@ html, body{
 .login_button button{
 	background-color: #b17e64;
 	color:white;
-	padding:8px 50px;
+	padding:8px 40px;
 	border:none;
 	cursor: pointer;
 	transition: background-color 100ms;
 	margin-bottom:50px;
+	margin-right:20px;
+	
+
 }
 .login_forgetPassword{
 	margin:0px 0px 0px 92px;
 	font-size:13px;
 }
+
+	
 
 
 
