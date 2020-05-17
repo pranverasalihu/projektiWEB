@@ -4,15 +4,14 @@
         //##Variables
         var $body = $('body'),
         	$header = $('.main_header'),
-        	$headerContent = $('.banner_content'), 
+        	$headerContent = $('.banner_content').length > 0 ? $('.banner_content').outerHeight() : 0, 
             $window = $(window),
             $doc = $(document),
             defaultEasing = [0.4, 0.0, 0.2, 1];
         //End Variables
-        $header.addClass('loaded');
         //Header scroll animation
         $doc.scroll(function() {
-            if ($doc.scrollTop() >= $headerContent.outerHeight() - $header.outerHeight()) {
+            if ($doc.scrollTop() >= $headerContent - $header.outerHeight()) {
                 $header.addClass('is--fixed');
             } else {
                 $header.removeClass('is--fixed');
