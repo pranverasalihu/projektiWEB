@@ -609,6 +609,16 @@ a{
     width: 80%;
     height: 100%;
 }
+.rooms_reservation p{
+	font-size: 20px;
+    padding-top: 30px;
+    margin-bottom: -15px;
+    text-align: center;
+    border-bottom: solid rgb(206, 158, 133);
+    border-width: 1px;
+}
+    
+}
 /*===== ROOMS =====*/
 
 /*=====CONTACT=====*/
