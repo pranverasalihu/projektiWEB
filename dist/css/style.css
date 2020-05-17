@@ -570,7 +570,6 @@ a{
 .rooms_price{
 	color: rgb(206, 158, 133);
     float: right;
-    padding-top: 10px;
 }
 .rooms_price li span{
 	color: #fff;

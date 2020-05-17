@@ -195,8 +195,7 @@
 
     .rooms_sidebar{
         width: 100%;
-        bottom: 10px;
-        display: flex;
+        bottom: 10px;=
         padding-right: 10px;
         margin-right: 5px;
     }
