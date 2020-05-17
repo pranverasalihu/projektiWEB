@@ -179,6 +179,7 @@
         padding-bottom: 0;
         margin-bottom: 30px;
     }
+
     /* END OF ABOUT */
     /* CONTACT */
     #map{
@@ -187,6 +188,32 @@
     .contact_button{
         padding: 10px 30px 8px 30px;
     }
+    /* END OF CONTACT */
+    /* ROOMS */
+    .rooms_img{
+        width: 100%;
+    }
+
+    .rooms_sidebar{
+        width: 100%;
+        bottom: 10px;=
+        padding-right: 10px;
+        margin-right: 5px;
+    }
+    .rooms{
+        width: 100%;  
+        margin-top: 20px;
+        overflow: hidden;
+        border-bottom: solid rgb(206, 158, 133);
+        border-width: 1px;
+    }
+    .room_title a{
+        margin-bottom: 10px;
+    }
+    /* END OF ROOMS */
+    
+
+
 
 }
 /* Tablet media query */
@@ -292,7 +319,7 @@
     .hamburger{
         display: block;
         float: right;
-        width: 40px;
+        width: 30px;
     }
     /* END OF HEADER */
     /* hOME PAGE */
@@ -416,6 +443,39 @@
         margin-right: 100px;
     }
     /* END OF CONTACT */
+    /* ROOMS */
+    .rooms_img{
+        width: 100%;
+    }
+
+    .rooms_sidebar{
+        width: 100%;
+        bottom: 10px;=
+        padding-right: 10px;
+        margin-right: 5px;
+    }
+    .rooms{
+        width: 100%;  
+        margin-top: 20px;
+        overflow: hidden;
+        border-bottom: solid rgb(206, 158, 133);
+        border-width: 1px;
+    }
+    .room_title a{
+        margin-bottom: 10px;
+        font-size: 20px;
+    }
+
+    .rooms_products {
+        margin-top: 20px;
+        color: rgb(206, 158, 133);
+        font-size: 18px;
+    }
+    .rooms_content{
+        color: #7F7E7E;
+        font-size: 20px;
+    }
+    /* END OF ROOMS */
 }
 /* BIG Tablet media query */
 @media only screen and (max-width: 1199px) and (min-width: 991px){
