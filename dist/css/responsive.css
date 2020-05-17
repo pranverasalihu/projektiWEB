@@ -447,4 +447,13 @@
     .right_paragraph p{
         font-size: 12px;
     }
+    /* END OF SERVICES */
+    /* ABOUT */
+    .aboutUs_image{
+        padding-top: 85px;
+    }
+    .aboutUs_image img{
+        margin-left: 15px;
+    }
+    
 }
