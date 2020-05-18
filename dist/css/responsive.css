@@ -523,6 +523,9 @@
     padding: 25px 10px 60px 40px; 
     width: 100%;
     }
+    .room_title a{
+        margin-bottom: 20px;
+    }
     /*END OF ROOMS*/
     
 }
