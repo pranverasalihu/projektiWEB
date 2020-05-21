@@ -620,8 +620,6 @@ a{
     padding-top: 10px;
 }
 
-    
-}
 /*===== ROOMS =====*/
 
 /*=====CONTACT=====*/
@@ -632,7 +630,7 @@ a{
 	color: #7F7E7E;
 	max-width: 1000px;
 	margin:auto;
-	padding: 90px 40px 80px 40px;
+	padding: 0 40px 80px 40px;
 	font-style: italic;	
 	line-height: 1.5;
 }

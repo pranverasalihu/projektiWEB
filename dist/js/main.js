@@ -4,7 +4,7 @@
         //##Variables
         var $body = $('body'),
         	$header = $('.main_header'),
-        	$headerContent = $('.banner_content').length > 0 ? $('.banner_content').outerHeight() : 0, 
+        	$headerContent = $('.banner_content').length > 0 ? $('.banner_content').outerHeight() : $('.mainWrap section:first').outerHeight() , 
             $window = $(window),
             $doc = $(document),
             defaultEasing = [0.4, 0.0, 0.2, 1];
