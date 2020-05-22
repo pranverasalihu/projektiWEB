@@ -703,7 +703,7 @@ html, body{
 	height: 100%;
 }
 
-.image-content{
+/*.image-content{
 	flex:2;
 	background:url('slider.jpg') no-repeat;
 	background-position: center;
@@ -711,15 +711,15 @@ html, body{
 	display: flex;
 	align-items: center;
 	flex-direction: column;
-}
+}*/
 
-.image-content span{
+/*.image-content span{
 	flex:1;
 	margin-top: 100px;
 	color: white;
 	font-size: 10rem;
 	font-family: 'Dancing Script', cursive;
-}
+}*/
 
 .login-content{
 	flex:1;
@@ -728,12 +728,14 @@ html, body{
 }
 
 .login-body .logo_footer.seperator{
-	margin:100px 100px 0 100px;
+	margin:50px 100px 0px 100px;
 }
 
 .login-body label{
 	display: block;
 	text-align: left;
+	font-style:italic;
+	
 }
 
 .login_body{
@@ -748,7 +750,7 @@ html, body{
 
 .login_box{
 	margin: 0 auto;
-	min-width: 200px;
+	min-width: 250px;
 	margin-top:100px;
 }
 .login_box input {
@@ -768,7 +770,8 @@ html, body{
 }
 
 .login_button{
-	text-align: center;
+
+	margin: 100px 10px 10px 50px;
 }
 .login_button button{
 	background-color: #b17e64;
@@ -777,7 +780,7 @@ html, body{
 	border:none;
 	cursor: pointer;
 	transition: background-color 100ms;
-	margin-bottom:50px;
+	margin-bottom:0px;
 	margin-right:20px;
 	
 
@@ -786,6 +789,15 @@ html, body{
 	margin:0px 0px 0px 92px;
 	font-size:13px;
 }
+
+.login_notregistered{
+	margin-top:20px;
+	margin-left:10px;
+	font-size:13px;
+	color:grey;
+}
+
+
 
 	
 
