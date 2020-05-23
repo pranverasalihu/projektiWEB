@@ -779,6 +779,10 @@ html, body{
 	font-size:13px;
 	color:grey;
 }
+/* Input errors */
+.input_error{
+	color: red;
+}
 
 
 
