@@ -1,5 +1,5 @@
 /*===REGISTER===*/
-var email= document.forms['form']['email'];
+    var email= document.forms['form']['email'];
     var username= document.forms['form']['username'];
     var password= document.forms['form']['password'];
     var confirmpassword= document.forms['form']['confirmpassword'];
@@ -37,7 +37,7 @@ var email= document.forms['form']['email'];
         }
     }
 
-    function email_Verify(){
+    /*function email_Verify(){
         if(email.value.length >= 8){
             email_error.style.display ="none";
             return true;
@@ -54,5 +54,5 @@ var email= document.forms['form']['email'];
             confirmpassword_error.style.display ="none";
             return true;
         }
-    }
+    }*/
   
