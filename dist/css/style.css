@@ -734,20 +734,8 @@ html, body{
 .login-body label{
 	display: block;
 	text-align: left;
-	font-style:italic;
-	
+	font-style:italic;	
 }
-
-.login_body{
-	text-align: center;
-	margin:0;
-	padding:0;
-	font-family:sans-serif;
-	background:url(slider.jpg) no-repeat;
-	background-size: cover;
-
-}
-
 .login_box{
 	margin: 0 auto;
 	min-width: 250px;
@@ -763,14 +751,12 @@ html, body{
     outline: none;
 	margin-top: 5px;
 	width: calc(100% - 20px);
-
 }
 .login_box .login-control{
 	margin-top: 20px;
 }
 
 .login_button{
-
 	margin: 100px 10px 10px 50px;
 }
 .login_button button{
@@ -782,14 +768,11 @@ html, body{
 	transition: background-color 100ms;
 	margin-bottom:0px;
 	margin-right:20px;
-	
-
 }
 .login_forgetPassword{
 	margin:0px 0px 0px 92px;
 	font-size:13px;
 }
-
 .login_notregistered{
 	margin-top:20px;
 	margin-left:10px;
