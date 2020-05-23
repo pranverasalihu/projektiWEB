@@ -18,28 +18,46 @@
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-                <form class="login_box">
+                <form class="login_box"  method="post" name="form" onsubmit="return validated()"> 
+                   
                     <div class="login-control">
                         <label>Username</label>
-                        <input type="text" name="" values="">
+                            <input autocomplete="off" type="text" name="username" values="">
+                            <div id="username_error">Please fill up your Username</div>
+
                     </div>
                     <div class="login-control">
                         <div>
                         <label>Password</label>
-                            <input type="password" name="" values="">
-                        </div>
+                            <input type="password" name="password" values="">
+                            <div id="password_error">Please fill up your Password</div>
+
                     </div>
-                    <div class="login-control login_button">
-                        <button type="submit">Login</button>
                     </div>
-                    <div class="login_notregistered">
-                        <p>Not registered?  
-                            <a href="registerForm.html"><u>Create an account</u></a>
-                        </p>
-                    </div>
-                </form>
+                    
+                   
+                        
+                <div class="login-control login_button">
+                    <button type="submit">Login</button>
+                </div>
+                <div class="login_notregistered">
+                    <p>Not registered?  
+                        <a href="registerForm.html"><u>Create an account</u></a>
+                    </p>
+                </div>
+
+                </form>  
+
+
             </div>
+       
         </div> 
+
+        
+       
+            <script src="dist/js/loginValidated.js"></script>
+
+
     </body>
 
 </html>
@@ -64,4 +82,5 @@
     
 
 
+   
    

@@ -728,7 +728,7 @@ html, body{
 }
 
 .login-body .logo_footer.seperator{
-	margin:50px 100px 0px 100px;
+	margin:50px 400px 0px 400px;
 }
 
 .login-body label{
@@ -775,9 +775,26 @@ html, body{
 }
 .login_notregistered{
 	margin-top:20px;
-	margin-left:10px;
+	margin-left:2px;
 	font-size:13px;
 	color:grey;
+	margin-bottom: 50px;
+}
+
+/*======REGISTER=====*/
+.login_box #email_error,
+.login_box #password_error,
+.login_box #username_error,
+.login_box #confirmpassword_error{
+	margin-top:5px;
+	width:345px;
+	font-size:13px;
+	color: #b17e64;
+	text-align:left;
+	display:none;
+	
+	
+
 }
 /* Input errors */
 .input_error{
