@@ -8,6 +8,8 @@
             $window = $(window),
             $doc = $(document),
             defaultEasing = [0.4, 0.0, 0.2, 1];
+
+       
         //End Variables
         //Header scroll animation
         $doc.scroll(function() {
@@ -62,4 +64,9 @@
             return isValid;
         }
     });
+    
+
+
 }(window.jQuery, window, document));
+
+

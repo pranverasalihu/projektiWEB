@@ -19,34 +19,41 @@
                     <span>V</span>
                 </div>
                
-                <form class="login_box">
+                <form class="login_box"  method="post" name="form" onsubmit="return validated()"> 
                     <div class="login-control">
                         <label>Email</label>
-                            <input type="text" name="" values="">
+                            <input autocomplete="off" type="text" name="email" values="">
+                            <div id="email_error">Please fill up your Email</div>
                     </div>
                     <div class="login-control">
                         <label>Username</label>
-                            <input type="text" name="" values="">
+                            <input autocomplete="off" type="text" name="username" values="">
+                            <div id="username_error">Please fill up your Username</div>
                     </div>
                     <div class="login-control">
                         <div>
                         <label>Password</label>
-                            <input type="password" name="" values="">
+                            <input type="password" name="password" values=""    >
+                            <div id="password_error">Please fill up your Password</div>
                     </div>
 
                     <div class="login-control">
                         <div>
                         <label>Confirm Password</label>
-                            <input type="password" name="" values="">
+                            <input type="password" name="confirmpassword" values="">
+                            <div id="confirmpassword_error">Please confirm your Password</div>
                     </div>
 
                     <div class="login-control login_button">
                         <button type="submit">Signup</button>
                     </div>
-                    
+                </form>  
             </div>
+       
         </div> 
-        <form>
+        
+       
+            <script src="dist/js/registerValidated.js"></script>
     </body>
 
     </html>

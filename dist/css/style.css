@@ -797,6 +797,22 @@ html, body{
 	color:grey;
 }
 
+/*======REGISTER=====*/
+.login_box #email_error,
+.login_box #password_error,
+.login_box #username_error,
+.login_box #confirmpassword_error{
+	margin-top:5px;
+	width:345px;
+	font-size:13px;
+	color: #b17e64;
+	text-align:left;
+	display:none;
+	
+	
+
+}
+
 
 
 	
