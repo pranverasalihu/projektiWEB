@@ -775,9 +775,10 @@ html, body{
 }
 .login_notregistered{
 	margin-top:20px;
-	margin-left:10px;
+	margin-left:2px;
 	font-size:13px;
 	color:grey;
+	margin-bottom: 50px;
 }
 
 /*======REGISTER=====*/
