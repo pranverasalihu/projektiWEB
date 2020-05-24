@@ -20,55 +20,35 @@
                 </div>
 
                
-                <form class="login_box"  method="post" name="form" onsubmit="return validated()"> 
-                    <div class="login-control">
+                <form class="login_box"> 
+                    <div class="emailContainer">
                         <label>Email</label>
-                            <input autocomplete="off" type="text" name="email" values="">
-                            <div id="email_error">Please fill up your Email</div>
+                        <input email="email" id="email">
                     </div>
-                    <div class="login-control">
+                    <div class="usernameContainer">
                         <label>Username</label>
-                            <input autocomplete="off" type="text" name="username" values="">
-                            <div id="username_error">Please fill up your Username</div>
-
+                        <input type="text" id="username">
                     </div>
-                    <div class="login-control">
-                        <div>
+                    <div class="passwordContainer">
                         <label>Password</label>
-                            <input type="password" name="password" values="">
-                            <div id="password_error">Please fill up your Password</div>
-
+                        <input type="password" id="password">
                     </div>
-                    </div>
-                    
-                    <div class="login-control">
-                        <div>
+                    <div class="confirmPasswordContainer">
                         <label>Confirm Password</label>
-
-                            <input type="password" name="confirmpassword" values="">
-                            <div id="confirmpassword_error">Please confirm your Password</div>
-
+                        <input type="password" id="confirmPassword">
                     </div>
-                </div>
-                    <div class="login-control login_button">
-                        <button type="submit">Sign up</button>
+                    <div class="register_button">
+                        <button class ="register_button">Sign up</button>
                     </div>  
                     <div class="login_notregistered">
                         <p>If registered.  
                             <a href="loginForm.html"><b>Login here</b></a>
                         </p>
                     </div>
-
                 </form>  
-
-
             </div>
-       
         </div> 
-
-        
-       
-            <script src="dist/js/registerValidated.js"></script>
-
+        <script src="dist/js/jquery-1.12.4.js"></script>
+        <script src="dist/js/main.js"></script>
     </body>
 </html>

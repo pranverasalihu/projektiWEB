@@ -37,6 +37,8 @@
                 emailContainer = $('.emailContainer'),
                 subjectContainer = $('.subjectContainer'),
                 messageContainer = $('.messageContainer'),
+                passwordContainer = $('.passwordContainer'),
+                usernameContainer = $('.usernameContainer'),
                 isValid = true,
                 textPattern = /^[a-zA-Z\s]*$/,
                 emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
@@ -44,6 +46,8 @@
             emailContainer.find('p').remove();
             subjectContainer.find('p').remove();
             messageContainer.find('p').remove();
+            passwordContainer.find('p').remove();
+            usernameContainer.find('p').remove();
 
             if($('#name').val() === '' || !textPattern.test($('#name').val())){
                 nameContainer.append('<p class="input_error">Name is required</p>');
@@ -61,12 +65,81 @@
                 messageContainer.append('<p class="input_error">Message is required</p>')
                 isValid = false;
             }
+            if($('#username').val().length < 4){
+                messageContainer.append('<p class="input_error">Message is required</p>')
+                isValid = false;
+            }
+            if($('#password').val().length < 6){
+                messageContainer.append('<p class="input_error">Message is required</p>')
+                isValid = false;
+            }
             return isValid;
         }
     });
-    
+    $('.register_button').on('click', function(e){
+        e.preventDefault();
+        if(!validateRegister()){
+            return;
+        }
+        $('login_box').submit();
+    });
+    function validateRegister() {
+        var emailContainer = $('.emailContainer'),
+            passwordContainer = $('.passwordContainer'),
+            confirmPasswordContainer = $('.confirmPasswordContainer'),
+            usernameContainer = $('.usernameContainer'),
+            validRegister = true,
+            textPattern = /^[a-zA-Z\s]*$/,
+            emailPattern = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\b$/i;
+        emailContainer.find('p').remove();
+        passwordContainer.find('p').remove();
+        usernameContainer.find('p').remove();
+        confirmPasswordContainer.find('p').remove();
 
+        if($('#email').val() === '' || !emailPattern.test($('#email').val())){
+            emailContainer.append('<p class="input_error">Email is required</p>')
+            validRegister = false;
+        }
+        if($('#username').val().length < 4){
+            usernameContainer.append('<p class="input_error">Message is required</p>')
+            validRegister = false;
+        }
+        if($('#password').val().length < 6){
+            passwordContainer.append('<p class="input_error">Message is required</p>')
+            validRegister = false;
+        }
+        if($('#confirmPassword').val().length < 6 || $('#confirmPassword').val() !== $('#password').val()){
+            confirmPasswordContainer.append('<p class="input_error">Message is required</p>')
+            validRegister = false;
+        }
+        return validRegister;
+    }
+    $('.login_button').on('click', function(e){
+        e.preventDefault();
+        if(!validateLogin()){
+            return;
+        }
+        $('login_box').submit();
+    });
+    function validateLogin() {
+        var usernameContainer = $('.usernameContainer'),
+            passwordContainer = $('.passwordContainer'),
+            validLogin = true,
+            textPattern = /^[a-zA-Z\s]*$/;
+        
+        usernameContainer.find('p').remove();
+        passwordContainer.find('p').remove();
 
+        if($('#username').val().length < 4){
+            usernameContainer.append('<p class="input_error">Message is required</p>')
+            validLogin = false;
+        }
+        if($('#password').val().length < 6){
+            passwordContainer.append('<p class="input_error">Message is required</p>')
+            validLogin = false;
+        }
+        return validRegister;
+    }
 }(window.jQuery, window, document));
 
 

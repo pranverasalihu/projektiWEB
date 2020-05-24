@@ -702,25 +702,6 @@ html, body{
 	flex-direction: row;
 	height: 100%;
 }
-
-/*.image-content{
-	flex:2;
-	background:url('slider.jpg') no-repeat;
-	background-position: center;
-	box-shadow: 2px 0px 20px rgba(0,0,0,0.5);
-	display: flex;
-	align-items: center;
-	flex-direction: column;
-}*/
-
-/*.image-content span{
-	flex:1;
-	margin-top: 100px;
-	color: white;
-	font-size: 10rem;
-	font-family: 'Dancing Script', cursive;
-}*/
-
 .login-content{
 	flex:1;
 	display: flex;
@@ -757,9 +738,22 @@ html, body{
 }
 
 .login_button{
-	margin: 100px 10px 10px 50px;
+	margin: 16px 7px 16px 57px;
 }
 .login_button button{
+	background-color: #b17e64;
+	color:white;
+	padding:8px 40px;
+	border:none;
+	cursor: pointer;
+	transition: background-color 100ms;
+	margin-bottom:0px;
+	margin-right:20px;
+}
+.register_button{
+	margin: 13px 7px 7px 27px;
+}
+.register_button button{
 	background-color: #b17e64;
 	color:white;
 	padding:8px 40px;
@@ -775,31 +769,22 @@ html, body{
 }
 .login_notregistered{
 	margin-top:20px;
-	margin-left:2px;
+	text-align: center;
 	font-size:13px;
 	color:grey;
 	margin-bottom: 50px;
 }
-
-/*======REGISTER=====*/
-.login_box #email_error,
-.login_box #password_error,
-.login_box #username_error,
-.login_box #confirmpassword_error{
-	margin-top:5px;
-	width:345px;
-	font-size:13px;
-	color: #b17e64;
-	text-align:left;
-	display:none;
-	
-	
-
+.usernameContainer,
+.passwordContainer,
+.confirmPasswordContainer{
+	margin-top: 10px;
 }
+
 /* Input errors */
 .input_error{
 	color: red;
 }
+
 
 
 
