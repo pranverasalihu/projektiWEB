@@ -73,7 +73,7 @@
         if(!validateRegister()){
             return;
         }
-        $('login_box').submit();
+        $('#register_form').submit();
     });
     function validateRegister() {
         var emailContainer = $('.emailContainer'),
@@ -93,15 +93,15 @@
             validRegister = false;
         }
         if($('#username').val().length < 4){
-            usernameContainer.append('<p class="input_error">Message is required</p>')
+            usernameContainer.append('<p class="input_error">Username is required</p>')
             validRegister = false;
         }
         if($('#password').val().length < 6){
-            passwordContainer.append('<p class="input_error">Message is required</p>')
+            passwordContainer.append('<p class="input_error">Password is required</p>')
             validRegister = false;
         }
         if($('#confirmPassword').val().length < 6 || $('#confirmPassword').val() !== $('#password').val()){
-            confirmPasswordContainer.append('<p class="input_error">Message is required</p>')
+            confirmPasswordContainer.append('<p class="input_error">Password is required</p>')
             validRegister = false;
         }
         return validRegister;
@@ -111,7 +111,7 @@
         if(!validateLogin()){
             return;
         }
-        $('login_box').submit();
+        $('#login_form').submit();
     });
     function validateLogin() {
         var usernameContainer = $('.usernameContainer'),
@@ -123,11 +123,11 @@
         passwordContainer.find('p').remove();
 
         if($('#username').val().length < 4){
-            usernameContainer.append('<p class="input_error">Message is required</p>')
+            usernameContainer.append('<p class="input_error">Username is required</p>')
             validLogin = false;
         }
         if($('#password').val().length < 6){
-            passwordContainer.append('<p class="input_error">Message is required</p>')
+            passwordContainer.append('<p class="input_error">Password is required</p>')
             validLogin = false;
         }
         return validLogin;
