@@ -130,7 +130,7 @@
             passwordContainer.append('<p class="input_error">Message is required</p>')
             validLogin = false;
         }
-        return validRegister;
+        return validLogin;
     }
 }(window.jQuery, window, document));
 
