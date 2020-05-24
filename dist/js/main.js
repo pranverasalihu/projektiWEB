@@ -65,14 +65,6 @@
                 messageContainer.append('<p class="input_error">Message is required</p>')
                 isValid = false;
             }
-            if($('#username').val().length < 4){
-                messageContainer.append('<p class="input_error">Message is required</p>')
-                isValid = false;
-            }
-            if($('#password').val().length < 6){
-                messageContainer.append('<p class="input_error">Message is required</p>')
-                isValid = false;
-            }
             return isValid;
         }
     });
