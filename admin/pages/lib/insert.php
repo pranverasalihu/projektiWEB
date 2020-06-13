@@ -7,7 +7,7 @@ if ( !empty($_POST)) {
          
         // keep track post values
         $title = $_POST['title'];
-		$price = $_POST['price'];
+		$excerpt = $_POST['excerpt'];
 		$description = $_POST['description'];
          
         // validate input
@@ -16,11 +16,6 @@ if ( !empty($_POST)) {
         	array_push($errors, 'Please enter the title');
             $valid = false;
         }
-         
-        if (empty($price)) {
-        	array_push($errors, 'Please enter price');
-            $valid = false;
-        } 
          
         if (empty($description)) {
         	array_push($errors, 'Please enter description');
@@ -73,9 +68,9 @@ if ( !empty($_POST)) {
 			        // insert data
 		            $pdo = Database::connect();
 		            $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-		            $sql = "INSERT INTO rooms (title,description,image,price) values (?, ?, ?,?)";
+		            $sql = "INSERT INTO pages (title,description,image,excerpt) values (?, ?, ?,?)";
 		            $q = $pdo->prepare($sql);
-		            $q->execute(array($title,$description,$target_file,$price));
+		            $q->execute(array($title,$description,$target_file,$excerpt));
 		            Database::disconnect();
         			header("Location: ../index.php");		            
 			    } else {
@@ -86,9 +81,9 @@ if ( !empty($_POST)) {
         }else{
             $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "INSERT INTO rooms (title,description,image,price) values (?, ?, ?,?)";
+            $sql = "INSERT INTO pages (title,description,image,excerpt) values (?, ?, ?,?)";
             $q = $pdo->prepare($sql);
-            $q->execute(array($title,$description,'',$price));
+            $q->execute(array($title,$description,'',$excerpt));
             Database::disconnect();
 			header("Location: ../index.php");		            
         }
