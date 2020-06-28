@@ -70,3 +70,53 @@ function get_page($id){
 		return $page[0];
 	}
 }
+
+//This function return all users from db
+function get_users(){
+	$pdo = Database::connect(); 
+    $usersQuery = 'SELECT * FROM users';
+    $sth = $pdo->prepare($usersQuery);
+	$sth->execute();
+	$users = $sth->fetchAll();
+	Database::disconnect();	
+	return $users;
+}
+
+//This function return a single user data from db by given :ID 
+function get_user($id){
+	$pdo = Database::connect(); 
+    $userQuery = 'SELECT * FROM users WHERE `id` ='.$id;
+    $sth = $pdo->prepare($userQuery);
+	$sth->execute();
+	$user = $sth->fetchAll();
+	Database::disconnect();	
+	if ($user) {
+		return $user[0];
+	}
+
+	}
+
+	//This function return all pages from db
+function get_roles(){
+	$pdo = Database::connect(); 
+    $rolesQuery = 'SELECT * FROM roles';
+    $sth = $pdo->prepare($rolesQuery);
+	$sth->execute();
+	$roles = $sth->fetchAll();
+	Database::disconnect();	
+	return $roles;
+}
+
+//This function return a single page data from db by given :ID 
+function get_role($id){
+	$pdo = Database::connect(); 
+    $roleQuery = 'SELECT * FROM roles WHERE `id` ='.$id;
+    $sth = $pdo->prepare($roleQuery);
+	$sth->execute();
+	$role = $sth->fetchAll();
+	Database::disconnect();	
+	if ($role) {
+		return $role[0];
+	}
+}
+
