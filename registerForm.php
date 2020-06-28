@@ -14,38 +14,41 @@
     </head>
     <body>
         <div class="login-body">
-           <div class="login-content">
+            <div class="login-content">
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-                <form class="login_box" id="login_form" action="loginForm.html" method="POST"> 
-                   
+
+               
+                <form class="login_box" id="register_form" action="registerForm.php" method="POST"> 
+                    <div class="emailContainer">
+                        <label>Email</label>
+                        <input email="email" id="email">
+                    </div>
                     <div class="usernameContainer">
                         <label>Username</label>
                         <input type="text" id="username">
                     </div>
                     <div class="passwordContainer">
                         <label>Password</label>
-                        <input type="password" id ="password">
+                        <input type="password" id="password">
                     </div>
-                       
-                    <div class="login_button">
-                        <button type=logn_button">Login</button>
+                    <div class="confirmPasswordContainer">
+                        <label>Confirm Password</label>
+                        <input type="password" id="confirmPassword">
                     </div>
-                </form>
-                <div class="login_notregistered">
-                    <p>Not registered?  
-                        <a href="registerForm.html"><u>Create an account</u></a>
-                    </p>
-                </div>
+                    <div class="register_button">
+                        <button class ="register_button">Sign up</button>
+                    </div>  
+                    <div class="login_notregistered">
+                        <p>If registered.  
+                            <a href="loginForm.php"><b>Login here</b></a>
+                        </p>
+                    </div>
+                </form>  
             </div>
-        </div>
+        </div> 
         <script src="dist/js/jquery-1.12.4.js"></script>
         <script src="dist/js/main.js"></script>
     </body>
 </html>
-    
-
-
-   
-   

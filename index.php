@@ -12,45 +12,9 @@
         <link rel="stylesheet" href="dist/css/responsive.css">
     </head>
     <body>
-        <!-- BEGIN HEADER -->
-        <header id="header" class="main_header">
-            <div class="container">
-                <div class="headerWrap">
-                    <div class="logo_header">
-                        <a href="index.html">
-                            <span>V</span>anoa
-                        </a>
-                    </div>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="nav_wrapper">
-                        <ul>
-                            <li>
-                                <a href="index.html" class="active">Home</a>
-                            </li>
-                            <li>
-                                <a href="rooms.html">Rooms</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                            <li>
-                                <a href="loginForm.html">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <!-- HEADER -->
+        <?php include 'includes/header.php'; ?>
+
         <main id="main" class="main_content">
             <div class="mainWrap">
                 <section class="block_section banner_section" style="background-image: url('dist/images/slider.jpg');">
@@ -172,7 +136,7 @@
                                 </div>
                                 <div class="room_title">
                                     <h1>Single Room</h1>
-                                    <a href="singleRoom.html">BOOK NOW</a>
+                                    <a href="singleRoom.php">BOOK NOW</a>
                                 </div>
                             </div>
                             <div class="column-3 column-mob-12">
@@ -181,7 +145,7 @@
                                 </div>
                                 <div class="room_title">
                                     <h1>Double Room</h1>
-                                    <a href="doubleRoom.html">BOOK NOW</a>
+                                    <a href="doubleRoom.php">BOOK NOW</a>
                                 </div>
                             </div>
                             <div class="column-3 column-mob-12">
@@ -190,7 +154,7 @@
                                 </div>
                                 <div class="room_title">
                                     <h1>Premium Suit</h1>
-                                    <a href="premiumSuit.html">BOOK NOW</a>
+                                    <a href="premiumSuit.php">BOOK NOW</a>
                                 </div>
                             </div>
                             <div class="column-3 column-mob-12">
@@ -199,74 +163,21 @@
                                 </div>
                                 <div class="room_title">
                                     <h1>Master Suit</h1>
-                                    <a href="masterSuit.html">BOOK NOW</a>
+                                    <a href="masterSuit.php">BOOK NOW</a>
                                 </div>
                             </div>
                         </div>
                         <div class="rooms_view">
-                            <a href="rooms.html">VIEW ALL ROOMS</a>
+                            <a href="rooms.php">VIEW ALL ROOMS</a>
                         </div>
                     </div>
                 </section>   
             </div>
         </main>
-        <footer id="foooter" class="main_footer">
-            <div class="container">
-                <div class="footerWrap">
-                    <div class="logo_footer seperator">
-                        <span>V</span>
-                    </div>
-                    <div class="footer_title">
-                        <h1>VANOA</h1>
-                    </div>
-                    <div class="footer_content">
-                        <div class="row has_gutter">
-                            <div class="column-4">
-                                <div class="footer_location">
-                                    <a href="#">
-                                        <img src="./dist/images/pin.svg" alt="">
-                                        <h3>Street Name, 123 City</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_email">
-                                    <a href="#">
-                                        <img src="./dist/images/mail.svg" alt="">
-                                        <h3>example@mail.com</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_phoneNumber">
-                                    <a href="#">
-                                        <img src="./dist/images/phone.svg" alt="">
-                                        <h3>00 111 222 333</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer_socials block_section">
-                            <a href="https://www.facebook.com/">
-                                <img src="./dist/images/logo.svg" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <img src="./dist/images/instagram.svg" alt="">
-                            </a>
-                            <a href="https://twitter.com">
-                                <img src="./dist/images/twitter.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="footer_contact block_section">
-                            <a href="contact.html">CONTACT</a>
-                        </div>
-                        <div class="footer_copyright block_section">
-                            <p>Vanoa - © 2020</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        
+        <!-- FOOTER -->
+        <?php include 'includes/footer.php'; ?>
+
         <!-- SCRIPTS -->
         <script src="dist/js/jquery-1.12.4.js"></script>
         <script src="dist/js/main.js"></script>

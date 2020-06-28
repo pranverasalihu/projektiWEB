@@ -13,44 +13,8 @@
     </head>
     <body>
         <!-- BEGIN HEADER -->
-        <header id="header" class="main_header">
-            <div class="container">
-                <div class="headerWrap">
-                    <div class="logo_header">
-                        <a href="index.html">
-                            <span>V</span>anoa
-                        </a>
-                    </div>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="nav_wrapper">
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="rooms.html">Rooms</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact.html"class="active">Contact</a>
-                            </li>
-                            <li>
-                                <a href="loginForm.html">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <?php include 'includes/header.php'; ?>
+
         <main id="main" class="main_content">
             <div class="mainWrap">
                 <section class="block_section contact_section">
@@ -112,63 +76,8 @@
             </div>
         </main>
         <!-- footer -->
-               <footer id="foooter" class="main_footer">
-            <div class="container">
-                <div class="footerWrap">
-                    <div class="logo_footer seperator">
-                        <span>V</span>
-                    </div>
-                    <div class="footer_title">
-                        <h1>VANOA</h1>
-                    </div>
-                    <div class="footer_content">
-                        <div class="row has_gutter">
-                            <div class="column-4">
-                                <div class="footer_location">
-                                    <a href="#">
-                                        <img src="./dist/images/pin.svg" alt="">
-                                        <h3>Street Name, 123 City</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_email">
-                                    <a href="#">
-                                        <img src="./dist/images/mail.svg" alt="">
-                                        <h3>example@mail.com</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_phoneNumber">
-                                    <a href="#">
-                                        <img src="./dist/images/phone.svg" alt="">
-                                        <h3>00 111 222 333</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer_socials block_section">
-                            <a href="https://www.facebook.com/">
-                                <img src="./dist/images/logo.svg" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <img src="./dist/images/instagram.svg" alt="">
-                            </a>
-                            <a href="https://twitter.com">
-                                <img src="./dist/images/twitter.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="footer_contact block_section">
-                            <a href="contact.html">CONTACT</a>
-                        </div>
-                        <div class="footer_copyright block_section">
-                            <p>Vanoa - © 2020</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php include 'includes/footer.php'; ?>
+        
         <!-- SCRIPTS -->
         <script src="dist/js/jquery-1.12.4.js"></script>
         <script src="dist/js/main.js"></script>

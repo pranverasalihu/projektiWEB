@@ -11,45 +11,9 @@
         <link rel="stylesheet" href="dist/css/responsive.css">
     </head>
     <body>
-        <!-- BEGIN HEADER -->
-         <header id="header" class="main_header">
-            <div class="container">
-                <div class="headerWrap">
-                    <div class="logo_header">
-                        <a href="index.html">
-                            <span>V</span>anoa
-                        </a>
-                    </div>
-                    <div class="hamburger">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <nav class="nav_wrapper">
-                        <ul>
-                            <li>
-                                <a href="index.html">Home</a>
-                            </li>
-                            <li>
-                                <a href="rooms.html" class="active">Rooms</a>
-                            </li>
-                            <li>
-                                <a href="services.html">Services</a>
-                            </li>
-                            <li>
-                                <a href="about.html">About</a>
-                            </li>
-                            <li>
-                                <a href="contact.html">Contact</a>
-                            </li>
-                            <li>
-                                <a href="loginForm.html">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
-            </div>
-        </header>
+        <!-- HEADER -->
+        <?php include 'includes/header.php'; ?>
+
         <main id="main" class="main_content">
             <div class="mainWrap">
                 <section class="block_section banner_section" style="background-image: url('dist/images/rooms_banner.jpg');">
@@ -74,22 +38,22 @@
                                     <ul class="rooms_products">
                                         <li class="rooms_display">
                                             <img width="60" height="60" src="./dist/images/singleRoom.jpg">
-                                            <a href="singleRoom.html">Single Room</a>
+                                            <a href="singleRoom.php">Single Room</a>
                                             <span> 49.00$</span>
                                         </li>
                                         <li>
                                             <img width="60" height="60" src="./dist/images/doubleRoom.jpg">
-                                            <a href="doubleRoom.html">Double Room</a>
+                                            <a href="doubleRoom.php">Double Room</a>
                                             <span>89.00$</span>
                                         </li>
                                         <li>
                                             <img width="60" height="60" src="./dist/images/premiumSuit.jpg">
-                                            <a href="premiumSuit.html">Premium Suit</a>
+                                            <a href="premiumSuit.php">Premium Suit</a>
                                             <span>129.00$</span>
                                         </li>
                                         <li>
                                         <img width="60" height="60" src="./dist/images/masterSuit.jpg">
-                                        <a href="masterSuit.html">Master Suit</a>
+                                        <a href="masterSuit.php">Master Suit</a>
                                         <span>229.00$</span>
                                         </li>
                                     </ul>
@@ -109,7 +73,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12" >
                                         <div class="rooms_title">
-                                            <a href="masterSuit.html">Master suit</a>
+                                            <a href="masterSuit.php">Master suit</a>
                                             <div class="rooms_price">
                                                 <span>229.00$</span>
                                             </div>
@@ -122,7 +86,7 @@
                                                 Duis aute irure dolor in reprehenderit in voluptate velit 
                                                 esse cillum dolore... </p>
                                                 <div class="room_title ">
-                                                    <a href="masterSuit.html">Book now</a>
+                                                    <a href="masterSuit.php">Book now</a>
                                                 </div>
                                         </div>
                                     </div>
@@ -137,7 +101,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12">
                                         <div class="rooms_title">
-                                            <a href="premiumSuit.html">Premium Suit</a>
+                                            <a href="premiumSuit.php">Premium Suit</a>
                                             <div class="rooms_price">
                                                 <span>129.00$</span>
                                             </div>
@@ -150,7 +114,7 @@
                                                 Duis aute irure dolor in reprehenderit in voluptate velit 
                                                 esse cillum dolore... </p>
                                                 <div class="room_title">
-                                                    <a href="premiumSuit.html">Book now</a>
+                                                    <a href="premiumSuit.php">Book now</a>
                                                 </div>
                                         </div>
                                     </div>
@@ -165,7 +129,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12">
                                         <div class="rooms_title">
-                                            <a href="doubleRoom.html">Double Room</a>
+                                            <a href="doubleRoom.php">Double Room</a>
                                             <div class="rooms_price">
                                                 <span>89.00$</span>
                                             </div>
@@ -176,7 +140,7 @@
                                                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore...</p>
                                                 <div class="room_title">
-                                                    <a href="doubleRoom.html">Book now</a>
+                                                    <a href="doubleRoom.php">Book now</a>
                                                 </div>
                                         </div>
                                     </div>
@@ -192,7 +156,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12">
                                         <div class="rooms_title">
-                                            <a href="singleRoom.html">Single Room</a>
+                                            <a href="singleRoom.php">Single Room</a>
                                             <div class="rooms_price">
                                                 <span>49.00$</span>
                                             </div>
@@ -203,7 +167,7 @@
                                                 aliqua. Ut enim ad minim veniam, quis nostrud exercitation
                                                 ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ...</p>
                                                 <div class="room_title">
-                                                    <a href="singleRoom.html">Book now</a>
+                                                    <a href="singleRoom.php">Book now</a>
                                                 </div>
                                         </div>
                                     </div>
@@ -214,64 +178,10 @@
                 </div>
             </div>
         </main>
+
         <!--footer-->
-        <footer id="foooter" class="main_footer">
-            <div class="container">
-                <div class="footerWrap">
-                    <div class="logo_footer seperator">
-                        <span>V</span>
-                    </div>
-                    <div class="footer_title">
-                        <h1>VANOA</h1>
-                    </div>
-                    <div class="footer_content">
-                        <div class="row has_gutter">
-                            <div class="column-4">
-                                <div class="footer_location">
-                                    <a href="#">
-                                        <img src="./dist/images/pin.svg" alt="">
-                                        <h3>Street Name, 123 City</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_email">
-                                    <a href="#">
-                                        <img src="./dist/images/mail.svg" alt="">
-                                        <h3>example@mail.com</h3>
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <div class="footer_phoneNumber">
-                                    <a href="#">
-                                        <img src="./dist/images/phone.svg" alt="">
-                                        <h3>00 111 222 333</h3>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="footer_socials block_section">
-                            <a href="https://www.facebook.com/">
-                                <img src="./dist/images/logo.svg" alt="">
-                            </a>
-                            <a href="https://www.instagram.com/">
-                                <img src="./dist/images/instagram.svg" alt="">
-                            </a>
-                            <a href="https://twitter.com">
-                                <img src="./dist/images/twitter.svg" alt="">
-                            </a>
-                        </div>
-                        <div class="footer_contact block_section">
-                            <a href="contact.html">CONTACT</a>
-                        </div>
-                        <div class="footer_copyright block_section">
-                            <p>Vanoa - © 2020</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php include 'includes/footer.php'; ?>
+
         <!-- SCRIPTS -->
         <script src="dist/js/jquery-1.12.4.js"></script>
         <script src="dist/js/main.js"></script>
