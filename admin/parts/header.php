@@ -16,6 +16,7 @@
 					<li><a href="<?php echo get_admin_url() ?>/pages">Pages</a></li>
 					<li><a href="<?php echo get_admin_url() ?>/rooms">Rooms</a></li>
 					<li><a href="<?php echo get_admin_url() ?>/users">Users</a></li>
+					<li><a href="<?php echo get_admin_url() ?>/services">Services</a></li>
 				</ul>
 			</nav>
 		</div>

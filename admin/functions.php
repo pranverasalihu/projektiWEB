@@ -96,27 +96,27 @@ function get_user($id){
 
 	}
 
-	//This function return all pages from db
-function get_roles(){
+	//This function return all services from db
+function get_services(){
 	$pdo = Database::connect(); 
-    $rolesQuery = 'SELECT * FROM roles';
-    $sth = $pdo->prepare($rolesQuery);
+    $servicesQuery = 'SELECT * FROM services';
+    $sth = $pdo->prepare($servicesQuery);
 	$sth->execute();
-	$roles = $sth->fetchAll();
+	$services = $sth->fetchAll();
 	Database::disconnect();	
-	return $roles;
+	return $services;
 }
 
-//This function return a single page data from db by given :ID 
-function get_role($id){
+//This function returns a single service data from db by given :ID 
+function get_service($id){
 	$pdo = Database::connect(); 
-    $roleQuery = 'SELECT * FROM roles WHERE `id` ='.$id;
-    $sth = $pdo->prepare($roleQuery);
+    $serviceQuery = 'SELECT * FROM services WHERE `id` ='.$id;
+    $sth = $pdo->prepare($serviceQuery);
 	$sth->execute();
-	$role = $sth->fetchAll();
+	$service = $sth->fetchAll();
 	Database::disconnect();	
-	if ($role) {
-		return $role[0];
+	if ($service) {
+		return $service[0];
 	}
 }
 

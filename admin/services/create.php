@@ -7,23 +7,21 @@
 			<a href="index.php" class="button-type">Back</a>
 		</div>
 		<table>
-			<caption><h1 class="table-title">Create new User</h1></caption>
+			<caption><h1 class="table-title">Create new Service</h1></caption>
 			<thead>
 				<tr>
-					<th>Username</th>
-					<th>Email</th>
-					<th>Password</th>
-					<th>Role</th>
+					<th>Title</th>
+					<th>Description</th>
+					<th>Image</th>
 					<th>Options</th>
 				</tr>
 			</thead>
 			<tbody>
 			<tr>
 				<form action="./lib/insert.php" method="post" enctype="multipart/form-data">
-					<td><input type="text" name="username" placeholder="Username"></td>
-					<td><input type="text" name="email" placeholder="Email"></td>
-					<td><input type="password" name="password" placeholder="Password" ></td>
-					<td><input type="text" name="role" placeholder="Role" ></td>
+					<td><input type="text" name="title" placeholder="Title"></td>
+					<td><textarea name="description"></textarea></td>
+					<td><input type="file" name="image" ></td>					
 					<td><input type="submit" value="Submit"></td>
 				</form>
 			</tr>

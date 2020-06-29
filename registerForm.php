@@ -18,7 +18,7 @@
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-
+                
                
                 <form class="login_box" id="register_form" action="registerForm.php" method="POST"> 
                     <div class="emailContainer">
