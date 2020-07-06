@@ -86,7 +86,7 @@
         emailContainer.find('p').remove();
         passwordContainer.find('p').remove();
         usernameContainer.find('p').remove();
-        confirmPasswordContainer.find('p').remove();
+      confirmPasswordContainer.find('p').remove();
 
         if($('#email').val() === '' || !emailPattern.test($('#email').val())){
             emailContainer.append('<p class="input_error">Email is required</p>')

@@ -27,9 +27,10 @@ if ( !empty($_POST)) {
         	array_push($errors, 'Please enter password');
             $valid = false;
         } 
-         if (empty($role)) {
+        if (empty($role)) {
             array_push($errors, 'Please enter role');
             $valid = false;
+         
         } 
 
         if(!$valid){

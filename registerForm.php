@@ -1,5 +1,5 @@
+<?php require 'views/insertUser.php';?>
 <!DOCTYPE html>
-<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,34 +18,34 @@
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-                
-               
                 <form class="login_box" id="register_form" action="registerForm.php" method="POST"> 
                     <div class="emailContainer">
                         <label>Email</label>
-                        <input email="email" id="email">
+                        <input type="email" name="email" id="email">
                     </div>
                     <div class="usernameContainer">
                         <label>Username</label>
-                        <input type="text" id="username">
+                        <input type="text" name="username" id="username">
                     </div>
                     <div class="passwordContainer">
                         <label>Password</label>
-                        <input type="password" id="password">
+                        <input type="password" name="password" id="password">
                     </div>
                     <div class="confirmPasswordContainer">
                         <label>Confirm Password</label>
                         <input type="password" id="confirmPassword">
                     </div>
+
+                  
                     <div class="register_button">
-                        <button class ="register_button">Sign up</button>
-                    </div>  
+                        <button name="register_button" class ="register_button">Sign up</button>
+                    </div>
                     <div class="login_notregistered">
                         <p>If registered.  
                             <a href="loginForm.php"><b>Login here</b></a>
                         </p>
                     </div>
-                </form>  
+                </form> 
             </div>
         </div> 
         <script src="dist/js/jquery-1.12.4.js"></script>

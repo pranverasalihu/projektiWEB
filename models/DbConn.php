@@ -1,6 +1,7 @@
 <?php
-class Database{
-	private static $dbName = 'vanoa' ;
+class DBConnection
+{
+    private static $dbName = 'vanoa' ;
     private static $dbHost = 'localhost' ;
     private static $dbUsername = 'root';
     private static $dbUserPassword = '';
@@ -32,6 +33,4 @@ class Database{
     {
         self::$cont = null;
     }
-
 }
-<?
