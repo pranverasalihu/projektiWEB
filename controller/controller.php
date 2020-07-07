@@ -1,7 +1,7 @@
 <?php
- require ('/models/userMapper.php')
- require ('/models/user.php') 
- require('models/DBConn.php')
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/models/userMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/models/user.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/models/DBConn.php');
 
 class Controller
 {
@@ -18,9 +18,11 @@ class Controller
     }
 
     public function getUser($username, $email, $password,$role )
-
-    	$user = new User($username, $email, $password,$role);
+    {
+        $user = new User($username, $email, $password,$role);
         $userMapper = new UserMapper($user);
         $userMapper->insert($username, $email, $password,$role);
         return true;
+    }
+    	
 }
