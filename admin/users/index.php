@@ -19,7 +19,7 @@
 			<?php $users = get_users(); ?>
 			<?php foreach ($users as $user): ?>
 				<tr>
-					<td><?php echo $user['id']; ?></td>
+					<td><?php echo $user['user_id']; ?></td>
 					<td><?php echo $user['username']; ?></td>
 					<td><?php echo $user['email']; ?></td>
 					<td><?php echo $user['password']; ?></td>
