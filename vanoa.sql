@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 29, 2020 at 04:28 PM
+-- Generation Time: Jul 11, 2020 at 06:38 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -53,7 +53,7 @@ INSERT INTO `pages` (`id`, `title`, `excerpt`, `description`, `image`, `created_
 
 CREATE TABLE `roles` (
   `role_id` bigint(20) UNSIGNED NOT NULL,
-  `role` varchar(100) NOT NULL
+  `role` varchar(100) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -84,7 +84,7 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `title`, `price`, `description`, `image`, `created_at`) VALUES
-(3, 'Single room', '49.00', 'tester  ', '', '2020-06-13 23:36:28'),
+(3, 'Single room', '49.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,\r\n                                                sed do eiusmod tempor incididunt ut labore et dolore magna\r\n                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation\r\n                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. \r\n                                                Duis aute irure dolor in reprehenderit in voluptate velit \r\n', '', '2020-06-13 23:36:28'),
 (4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor', '', '2020-06-28 18:49:15'),
 (5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse', '', '2020-06-28 18:50:39'),
 (6, 'Master Suit', '229.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse', '', '2020-06-28 18:51:41');
@@ -110,22 +110,22 @@ CREATE TABLE `services` (
 --
 
 CREATE TABLE `users` (
-  `id` bigint(20) UNSIGNED NOT NULL,
+  `user_id` bigint(20) UNSIGNED NOT NULL,
   `username` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `role` bigint(20) UNSIGNED NOT NULL
+  `role` bigint(20) UNSIGNED DEFAULT 2
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `role`) VALUES
+INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`) VALUES
 (1, 'krenare', 'krenare@ubt-uni.net', 'krenare', 1),
 (2, 'albina', 'albina@ubt-uni.net', 'albina', 1),
 (3, 'pranvera', 'pranvera@ubt-uni.net', 'pranvera', 1),
-(4, 'besim', 'besim@ubt-uni.net', 'besim', 2);
+(18, 'krenki', 'nare-r@live.com', '$2y$10$TdtdydOQCSk8aJj0Vey9yu3KiTppDeCsX7TQnG06BbfZ2nC/I.ska', 2);
 
 --
 -- Indexes for dumped tables
@@ -159,7 +159,7 @@ ALTER TABLE `services`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`),
+  ADD PRIMARY KEY (`user_id`),
   ADD KEY `role` (`role`);
 
 --
@@ -188,13 +188,13 @@ ALTER TABLE `rooms`
 -- AUTO_INCREMENT for table `services`
 --
 ALTER TABLE `services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- Constraints for dumped tables

@@ -1,3 +1,8 @@
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    $room = new ShowRooms();
+    $rooms = $room->get_Rooms();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -63,28 +68,29 @@
                             </div>
                             </li>
                             
-                            </div>  
+                            </div>
+                           
+                            <?php foreach ($rooms as $room): ?>
                             <div class="rooms"> 
                                 <div class="row has_gutter">
                                     <div class="column-4 column-mob-12" >
                                         <div class="rooms_img">
-                                            <img src="./dist/images/masterSuit.jpg" alt="">
+                                            <?php if ($room['image']): ?>
+                                                <img src="<?php echo $room['image']; ?>" >
+                                                    <?php else: ?>
+                                                        <p>No image Selected</p>
+                                            <?php endif?>
                                         </div>
                                     </div>
                                     <div class="column-8 column-mob-12" >
                                         <div class="rooms_title">
-                                            <a href="masterSuit.php">Master suit</a>
+                                            <a href="masterSuit.php"><?php echo $room['title'] ?></a>
                                             <div class="rooms_price">
-                                                <span>229.00$</span>
+                                                <span><?php echo $room['price'] ?></span>
                                             </div>
                                         </div>
                                         <div class="rooms_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                                Duis aute irure dolor in reprehenderit in voluptate velit 
-                                                esse cillum dolore... </p>
+                                            <p><?php echo $room['description'] ?> </p>
                                                 <div class="room_title ">
                                                     <a href="masterSuit.php">Book now</a>
                                                 </div>
@@ -92,87 +98,8 @@
                                     </div>
                                 </div> 
                             </div>
-                            <div class="rooms"> 
-                                <div class="row has_gutter " >
-                                    <div class="column-4 column-mob-12">
-                                        <div class="rooms_img">
-                                            <img src="./dist/images/premiumSuit.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="column-8 column-mob-12">
-                                        <div class="rooms_title">
-                                            <a href="premiumSuit.php">Premium Suit</a>
-                                            <div class="rooms_price">
-                                                <span>129.00$</span>
-                                            </div>
-                                        </div>
-                                        <div class="rooms_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                                Duis aute irure dolor in reprehenderit in voluptate velit 
-                                                esse cillum dolore... </p>
-                                                <div class="room_title">
-                                                    <a href="premiumSuit.php">Book now</a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rooms"> 
-                                <div class="row has_gutter " >
-                                    <div class="column-4 column-mob-12">
-                                        <div class="rooms_img">
-                                            <img src="./dist/images/doubleRoom.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="column-8 column-mob-12">
-                                        <div class="rooms_title">
-                                            <a href="doubleRoom.php">Double Room</a>
-                                            <div class="rooms_price">
-                                                <span>89.00$</span>
-                                            </div>
-                                        </div>
-                                        <div class="rooms_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore...</p>
-                                                <div class="room_title">
-                                                    <a href="doubleRoom.php">Book now</a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="rooms"> 
-                                <div class="row has_gutter " >
-                                    
-                                    <div class="column-4 column-mob-12">
-                                        <div class="rooms_img">
-                                            <img src="./dist/images/singleRoom.jpg" alt="">
-                                        </div>
-                                    </div>
-                                    <div class="column-8 column-mob-12">
-                                        <div class="rooms_title">
-                                            <a href="singleRoom.php">Single Room</a>
-                                            <div class="rooms_price">
-                                                <span>49.00$</span>
-                                            </div>
-                                        </div>
-                                        <div class="rooms_content">
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                                ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore ...</p>
-                                                <div class="room_title">
-                                                    <a href="singleRoom.php">Book now</a>
-                                                </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                        <?php endforeach; ?>
+                       
                         </div>
                     </section>
                 </div>

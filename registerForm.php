@@ -1,4 +1,4 @@
-<?php require 'views/insertUser.php';?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertUser.php'); ?>
 <!DOCTYPE html>
     <head>
         <meta charset="utf-8">

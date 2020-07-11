@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,15 +23,15 @@
                    
                     <div class="usernameContainer">
                         <label>Username</label>
-                        <input type="text" id="username">
+                        <input type="text" name="username" id="username">
                     </div>
                     <div class="passwordContainer">
                         <label>Password</label>
-                        <input type="password" id ="password">
+                        <input type="password" name="password" id ="password">
                     </div>
                        
                     <div class="login_button">
-                        <button type=logn_button">Login</button>
+                        <button type=login_button" name="login_button">Login</button>
                     </div>
                 </form>
                 <div class="login_notregistered">

@@ -11,7 +11,7 @@ class User
         $this->username = $username;
         $this->email = $email;
         $this->password = $password;
-        $this->role = 0;
+        $this->role = 2;
     }
 
     public function getUsername()

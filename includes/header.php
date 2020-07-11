@@ -1,3 +1,12 @@
+<?php
+
+    function active($current_page){
+            $page = basename($_SERVER['PHP_SELF']);
+                if(isset($page) && $page == $current_page){
+                 echo 'active';
+            }
+    }
+?>
 <header id="header" class="main_header">
             <div class="container">
                 <div class="headerWrap">
@@ -12,15 +21,7 @@
                         <span></span>
                     </div>
                     <nav class="nav_wrapper">
-                    <?php
-
-                        function active($current_page){
-                             $page = basename($_SERVER['PHP_SELF']);
-                                 if(isset($page) && $page == $current_page){
-                                    echo 'active';
-                                }
-                        }
-                    ?>
+                   
                         <ul>
                             <li>
                                 <a class="<?php active('index.php');?>" href="index.php">Home</a>
