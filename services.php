@@ -1,3 +1,8 @@
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
+    $service = new ShowServices();
+    $services = $service->get_Services();
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -26,54 +31,52 @@
                     </div>
                 </div>
             </section>
+
+            
             <section class="block_section left_section">
                 <div class="row">
                     <div class="column-6 column-mob-12">
                         <div class="left_image">
-                            <img src="./dist/images/massage.jpg" alt="">
+                            <?php if ($services[0] ['image']): ?>
+                                <img src="<?php echo $services[0] ['image']; ?>" >
+                            <?php else: ?>
+                                    <p>No image Selected</p>
+                            <?php endif?>   
                         </div>
                     </div>
                     <div class="column-6 column-mob-12">
                         <div class="left_content">
                             <div class="left_title">
-                                <h1>MASSAGE</h1>
+                                <h1><?php echo $services[0] ['title']; ?></h1>
                             </div>
                             <div class="left_paragraph">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit 
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia 
-                                deserunt mollit anim id est laborum.</p>
+                                <p><?php echo $services[0] ['description']; ?></p>
                             </div>
                         </div>
                     </div>
+              
                 </div>
             </section>
-        <section class="block_section right_section">
-            <div class="row">
+     
+         <section class="block_section right_section">
+            <div class="row" >
                 <div class="column-6 column-mob-12">
                     <div class="right_content">
                         <div class="right_title">
-                            <h1>FOOD</h1>
+                            <h1><?php echo $services[1] ['title']; ?></h1>
                         </div>
                         <div class="right_paragraph">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit 
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.</p>
+                           <p><?php echo $services[1] ['description']; ?></p>
                         </div>
                     </div>
                 </div>
                 <div class="column-6 column-mob-12">
                     <div class="right_image">
-                        <img src="./dist/images/food.jpg" alt="">
+                        <?php if ($services[1] ['image']): ?>
+                                <img src="<?php echo $services[1] ['image']; ?>" >
+                            <?php else: ?>
+                                    <p>No image Selected</p>
+                            <?php endif?>   
                     </div>
                 </div>
             </div>
@@ -82,23 +85,20 @@
             <div class="row">
                 <div class="column-6 column-mob-12">
                     <div class="left_image">
-                        <img src="./dist/images/bar.jpg" alt="">
+                         <?php if ($services[2] ['image']): ?>
+                                <img src="<?php echo $services[2] ['image']; ?>" >
+                            <?php else: ?>
+                                    <p>No image Selected</p>
+                            <?php endif?> 
                     </div>
                 </div>
                 <div class="column-6 column-mob-12">
                     <div class="left_content">
                         <div class="left_title">
-                            <h1>BAR</h1>
+                            <h1><?php echo $services[2] ['title']; ?></h1>
                         </div>
                         <div class="left_paragraph">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                            Duis aute irure dolor in reprehenderit in voluptate velit 
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                            deserunt mollit anim id est laborum.</p>
+                            <p><?php echo $services[2] ['description']; ?></p>
                         </div>
                     </div>
                 </div>
@@ -108,23 +108,20 @@
                     <div class="column-6 column-mob-12">
                         <div class="right_content">
                             <div class="right_title">
-                                <h1>POOL</h1>
+                                <h1><?php echo $services[3] ['title']; ?></h1>
                             </div>
                             <div class="right_paragraph">
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                sed do eiusmod tempor incididunt ut labore et dolore magna
-                                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                Duis aute irure dolor in reprehenderit in voluptate velit 
-                                esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                occaecat cupidatat non proident, sunt in culpa qui officia 
-                                deserunt mollit anim id est laborum.</p>
+                                <p><?php echo $services[3] ['description']; ?></p>
                             </div>
                         </div>
                     </div>
                     <div class="column-6 column-mob-12">
                         <div class="right_image">
-                            <img src="./dist/images/pool.jpg" alt="">
+                            <?php if ($services[3] ['image']): ?>
+                                <img src="<?php echo $services[3] ['image']; ?>" >
+                            <?php else: ?>
+                                    <p>No image Selected</p>
+                            <?php endif?> 
                         </div>
                     </div>
                 </div>

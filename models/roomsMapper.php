@@ -1,6 +1,6 @@
 <?php
 require_once ('DbConn.php');
-require_once ('user.php');
+
 
 class RoomsMapper
 {

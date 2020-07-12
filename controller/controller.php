@@ -22,6 +22,12 @@ class Controller
     	return $rooms;
     }
 
+     public function get_services(){
+    	$servicesMapper = new ServicesMapper();
+    	$services = $servicesMapper->getServices();
+    	return $services;
+    }
+
   
     	
 }
