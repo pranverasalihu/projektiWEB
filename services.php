@@ -31,8 +31,6 @@
                     </div>
                 </div>
             </section>
-
-            
             <section class="block_section left_section">
                 <div class="row">
                     <div class="column-6 column-mob-12">
