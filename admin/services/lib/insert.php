@@ -46,7 +46,7 @@ if ( !empty($_POST)) {
                 }
             }
             // Check file size
-            if ($_FILES["image"]["size"] > 500000) {
+            if ($_FILES["image"]["size"] > 5000000) {
                 echo "Sorry, your file is too large.";
                 echo '<a href="../create.php">Back</a>';
                 $uploadOk = 0;
@@ -70,6 +70,8 @@ if ( !empty($_POST)) {
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                     $sql = "INSERT INTO services (title,description,image) values (?, ?, ?,?)";
                     $q = $pdo->prepare($sql);
+                    $domain = sprintf( "%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
+                    $target_file = str_replace($_SERVER['DOCUMENT_ROOT'], $domain, $target_file);
                     $q->execute(array($title,$description,$target_file));
                     Database::disconnect();
                     header("Location: ../index.php");                   

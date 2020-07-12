@@ -46,7 +46,7 @@ if ( !empty($_POST)) {
                 }
             }
             // Check file size
-            if ($_FILES["image"]["size"] > 500000) {
+            if ($_FILES["image"]["size"] > 5000000) {
                 echo "Sorry, your file is too large.";
                 echo '<a href="../edit.php?id='.$id.'">Back</a>';
                 $uploadOk = 0;
@@ -81,6 +81,8 @@ if ( !empty($_POST)) {
                         
                         $sql = "UPDATE `services` SET `title`=?,`description`=?,`image`=? WHERE `id` = ?";
                         $q = $pdo->prepare($sql);
+                        $domain = sprintf( "%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
+                        $target_file = str_replace($_SERVER['DOCUMENT_ROOT'], $domain, $target_file);
                         $q->execute(array($title,$description,$target_file,$id));
                         Database::disconnect();
                         header("Location: ../index.php");
