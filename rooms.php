@@ -1,7 +1,6 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showRooms.php');
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
     $room = new ShowRooms();
     $rooms = $room->get_Rooms();
-
 ?>
 <!DOCTYPE html>
 <html>

@@ -31,7 +31,7 @@
 					<form action="./lib/update.php" method="post" enctype="multipart/form-data">
 						<td><?php echo $id ?></td>
 						<td><input type="text" name="title" placeholder="Title" value="<?php echo $service['title'];?>"></td>
-						<td><textarea name="description"><?php echo $room['description']?> </textarea></td>
+						<td><textarea name="description"><?php echo $service['description']?> </textarea></td>
 						<?php if(!empty($service['image'])): ?>
 							<td><p><?php echo substr($service['image'], 14, 29); ?></p><input type="file" name="image"></td>
 						<?php else: ?>

@@ -1,26 +1,4 @@
- <?php
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/login.php');
-    session_start();
 
-    if(isset($_SESSION['user_id'])){
-        header("Location: index.php");
-    }
-
-     $user = new Login();
-
-     if ( !empty($_POST)) {
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-
-        if(isset($_POST['login_button'])) {
-
-            $user->login($username,$password);
-            
-            
-        }
-
-    }
- ?>
 <!DOCTYPE html>
 <html>
     <head>

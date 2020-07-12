@@ -30,7 +30,7 @@ if ( !empty($_POST)) {
             echo '<a href="../edit.php?id='.$id.'">Back</a>';
         }
         elseif($_FILES['image']['name'] !== ''){
-            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/2020/vanoa/admin/images/uploads/";
+            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/projektiWEB-master/admin/images/uploads/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
             $uploadOk = 1;
             $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
