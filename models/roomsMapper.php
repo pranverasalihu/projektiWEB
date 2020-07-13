@@ -6,7 +6,7 @@ class RoomsMapper
 {
    
     private $connection;
-    public function __construct( )
+    public function __construct()
     {
         
         $this->connection = DBConnection::connect();
@@ -28,8 +28,9 @@ class RoomsMapper
   
     public function getRoom($id){
 
-        $roomQuery = 'SELECT * FROM rooms WHERE `id` ='.$id;
-        $sth = $pdo->prepare($roomQuery);
+        $roomQuery = 'SELECT * FROM rooms WHERE id = :id';
+        $sth = $this->connection->prepare($roomQuery);
+        $sth->bindParam(':id', $id);
         $sth->execute();
         $room = $sth->fetchAll();
         if ($room) {

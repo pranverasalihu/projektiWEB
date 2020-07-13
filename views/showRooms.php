@@ -10,7 +10,14 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/controller/controll
 	        $rooms = $controller->get_rooms();
 			return $rooms;
 	    }
+
+	    public function get_Room($id)
+	    {
+	        $controller = new Controller();
+	        $room = $controller->get_room($id);
+			return $room;
+	    }
 	
-		}
+	}
 	
 	?>

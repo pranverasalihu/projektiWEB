@@ -23,6 +23,12 @@ class Controller
     	return $rooms;
     }
 
+    public function get_room($id){
+        $roomsMapper = new RoomsMapper();
+        $room = $roomsMapper->getRoom($id);
+        return $room;
+    }
+
      public function get_services(){
     	$servicesMapper = new ServicesMapper();
     	$services = $servicesMapper->getServices();
