@@ -1,3 +1,12 @@
+<?php 
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -40,20 +49,14 @@
                             </div>
                             <div class="column-6 column-mob-12">
                                 <div class="about_title">
-                                    <h1>Best Booking Hotel</h1>
+                                    <?php 
+                                        $page = new ShowPages();
+                                        $about = $page->get_Page(1);
+                                    ?>
+                                    <h1><?php echo $about['title']; ?></h1>
                                 </div>
                                 <div class="about_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                    irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                    deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur 
-                                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                    ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p><?php echo $about['description']; ?></p>
                                 </div>
                             </div>
                         </div> 
@@ -64,109 +67,57 @@
                         <div class="services_title">
                             <h1>OUR SERVICES</h1>
                         </div>
+                         <?php 
+                             $s = new ShowServices();
+                             $services = $s->get_Services();
+
+                             foreach ($services as $service):
+                        ?>
                         <div class="row has_gutter">
                             <div class="column-3 column-mob-12">
                                 <div class="service_title">
-                                    <h1>MASSAGE</h1>
+                                    <h1><?php echo $service['title']; ?></h1>
                                 </div>
                                 <div class="service_image">
-                                    <img src="./dist/images/massage.jpg" alt="">
+                                <?php if ($service['image']): ?>
+                                    <img src="<?php echo $service['image']; ?>">
+                                        <?php else: ?>
+                                            <p>No image Selected</p>
+                                <?php endif?>
                                 </div>
                                 <div class="service_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                        irure dolor in reprehenderit in voluptate velit esse</p>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_title">
-                                    <h1>FOOD</h1>
-                                </div>
-                                <div class="service_image">
-                                    <img src="./dist/images/food.jpg" alt="">
-                                </div>
-                                <div class="service_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                        irure dolor in reprehenderit in voluptate velit esse</p>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_title">
-                                    <h1>BAR</h1>
-                                </div>
-                                <div class="service_image">
-                                    <img src="./dist/images/bar.jpg" alt="">
-                                </div>
-                                <div class="service_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                        irure dolor in reprehenderit in voluptate velit esse</p>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_title">
-                                    <h1>POOL</h1>
-                                </div>
-                                <div class="service_image">
-                                    <img src="./dist/images/pool.jpg" alt="">
-                                </div>
-                                <div class="service_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                        irure dolor in reprehenderit in voluptate velit esse</p>
+                                    <p><?php echo $service['description']; ?></p>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                        <?php endforeach; ?>
                 </section>
                 <section class="block_section rooms_section">
                     <div class="container">
                         <div class="rooms_title">
                             <h1>FAVORITE ROOMS</h1>
                         </div>
+                        <?php 
+                             $r = new ShowRooms();
+                             $rooms = $r->get_Rooms();
+                            foreach ($rooms as $room):
+                        ?>
                         <div class="row has_gutter">
                             <div class="column-3 column-mob-12">
                                 <div class="service_image">
-                                    <img src="./dist/images/singleRoom.jpg" alt="">
+                                    <?php if ($room['image']): ?>
+                                    <img src="<?php echo $room['image']; ?>">
+                                        <?php else: ?>
+                                            <p>No image Selected</p>
+                                <?php endif?>
                                 </div>
                                 <div class="room_title">
-                                    <h1>Single Room</h1>
-                                    <a href="singleRoom.php">BOOK NOW</a>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_image">
-                                    <img src="./dist/images/doubleRoom.jpg" alt="">
-                                </div>
-                                <div class="room_title">
-                                    <h1>Double Room</h1>
-                                    <a href="doubleRoom.php">BOOK NOW</a>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_image">
-                                    <img src="./dist/images/premiumSuit.jpg" alt="">
-                                </div>
-                                <div class="room_title">
-                                    <h1>Premium Suit</h1>
-                                    <a href="premiumSuit.php">BOOK NOW</a>
-                                </div>
-                            </div>
-                            <div class="column-3 column-mob-12">
-                                <div class="service_image">
-                                    <img src="./dist/images/masterSuit.jpg" alt="">
-                                </div>
-                                <div class="room_title">
-                                    <h1>Master Suit</h1>
-                                    <a href="masterSuit.php">BOOK NOW</a>
+                                    <h1><?php echo $room['title']; ?></h1>
+                                    <a href="<?php roomLink($room['title']); ?>">BOOK NOW</a>
                                 </div>
                             </div>
                         </div>
+                    <?php endforeach; ?>
                         <div class="rooms_view">
                             <a href="rooms.php">VIEW ALL ROOMS</a>
                         </div>
