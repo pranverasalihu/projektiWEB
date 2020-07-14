@@ -35,9 +35,36 @@
                         <div class="row has_gutter">
                             <div class="column-6 column-mob-12">
                                 <div class="aboutUs_image">
-                                    <img src="./dist/images/aboutUs_hotel.jpg" alt="">
+
+                        <div class="slideshow-container"></div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/aboutUs_hotel.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/bar.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/food.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/pool.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/massage.jpg" style="width:500px;height:300px;">
+                        </div>
+
+
+                                    <!-- <img src="./dist/images/aboutUs_hotel.jpg" alt=""> -->
                                 </div>
+
+                                
                             </div>
+
                             <div class="column-6 column-mob-12">
                                 <div class="about_title">
                                     <h1>About Us</h1>
