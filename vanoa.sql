@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 13, 2020 at 03:38 PM
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Jul 14, 2020 at 10:28 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -132,9 +132,11 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`) VALUES
-(1, 'krenare', 'krenare@ubt-uni.net', 'krenare', 1),
-(2, 'albina', 'albina@ubt-uni.net', 'albina', 1),
-(3, 'pranvera', 'pranvera@ubt-uni.net', 'pranvera', 1);
+(1, 'krenare', 'krenare@ubt-uni.net', '$2y$10$NdLuCtEJeI/nCGj.KBbGDeI7LcVRrPj9aXcb5d./.bMr/iMH9lEY.', 1),
+(2, 'albina', 'albina@ubt-uni.net', '$2y$10$OcL182Ka3IsQ5GJ5BK2cmOd3Wh2CBOM/H/RjWXWymQQRToAVTO0DW', 1),
+(3, 'pranvera', 'pranvera@ubt-uni.net', '$2y$10$UGcyBUD7nd3kcPCcW2FTH.ahy.CHw6NQ5x5s2Lgjvts0YGpLuaWUO', 1),
+(28, 'lika', 'loriksalihu9@gmail.com', '$2y$10$F0BjmoWchFPZdZzY8CkJyu4I5wuYf53Ee7OymTjRdhHWmoDS18AlK', 2),
+(30, 'shyqa', 'shyqa@gmail.com', '$2y$10$I52vlvB1oTcKWA7AYZqBEOoe2c5p.kSNxqr/YadCGqEt50xQuVI7i', 2);
 
 --
 -- Indexes for dumped tables
@@ -203,7 +205,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- Constraints for dumped tables
