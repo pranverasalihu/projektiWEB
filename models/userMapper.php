@@ -27,21 +27,20 @@ class UserMapper
         $statement->execute();
     }
 
-     public function update($username, $email, $password,$role)
-    {
-
-        $sql = "UPDATE `users` SET `username`=?,`email`=?,`password`=?,`role`=?  WHERE `user_id` = ?";
+    public function update($userId, $username, $email, $password,$role){
+        $sql = "UPDATE users SET username=:username , email=:email , password=:password , role=:role  WHERE user_id = :user_id";
 
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(":username", $username);
         $statement->bindParam(":email", $email);
         $statement->bindParam(":password", $password);
         $statement->bindParam(":role", $role);
+        $statement->bindParam(":user_id", $userId);
 
         $statement->execute();
     }
 
-     public function getUsers(){
+    public function getUsers(){
 
         $usersQuery = 'SELECT * FROM users';
         $sth = $this->connection->prepare($usersQuery);
@@ -49,12 +48,12 @@ class UserMapper
         $users = $sth->fetchAll();
         DBConnection::disconnect(); 
     
-            return $users;
+        return $users;
     }
 
     public function getUser($id){
 
-        $usersQuery = 'SELECT * FROM user WHERE id = :id';
+        $usersQuery = 'SELECT * FROM users WHERE user_id = :id';
         $sth = $this->connection->prepare($usersQuery);
         $sth->bindParam(':id', $id);
         $sth->execute();

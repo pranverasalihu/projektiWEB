@@ -1,3 +1,12 @@
+<?php 
+	session_start();
+	if ( !isset( $_SESSION['is_admin'] ) && !$_SESSION['is_admin'] ) {
+		header("Location: ".get_home_url()."/loginForm.php");
+	}
+	else if ( isset( $_SESSION['is_admin'] ) && !$_SESSION['is_admin'] ) {
+		header("Location: ".get_home_url()."/index.php");
+	}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,6 +26,7 @@
 					<li><a href="<?php echo get_admin_url() ?>/rooms">Rooms</a></li>
 					<li><a href="<?php echo get_admin_url() ?>/users">Users</a></li>
 					<li><a href="<?php echo get_admin_url() ?>/services">Services</a></li>
+					<li><a href="<?php echo get_home_url() ?>/logout.php">Logout</a></li>
 				</ul>
 			</nav>
 		</div>

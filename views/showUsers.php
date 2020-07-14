@@ -14,7 +14,7 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/controller/controller.php')
 	    public function get_User($id)
 	    {
 	        $controller = new Controller();
-	        $user = $controller->get_user($id);
+			$user = $controller->get_user($id);
 			return $user;
 	    }
 	

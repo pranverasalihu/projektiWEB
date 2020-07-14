@@ -3,8 +3,6 @@
     require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showServices.php');
     require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showPages.php');
     require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php');
-
-
 ?>
 
 <!DOCTYPE html>

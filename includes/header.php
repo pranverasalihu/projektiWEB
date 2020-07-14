@@ -1,3 +1,8 @@
+<?php 
+    session_start();
+    $isAdminLogin = isset( $_SESSION['is_admin'] ) && $_SESSION['is_admin'];
+    $isUserLogin = isset( $_SESSION['is_admin'] ) && !$_SESSION['is_admin'];
+?>
 <?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php'); ?>
 <header id="header" class="main_header">
             <div class="container">
@@ -30,9 +35,15 @@
                             <li>
                                 <a class="<?php active('contact.php');?>" href="contact.php">Contact</a>
                             </li>
-                            <li>
-                                <a class="<?php active('loginForm.php');?>" href="loginForm.php">Login</a>
-                            </li>
+                            <?php if($isUserLogin): ?>
+                                <li>
+                                    <a href="logout.php">Logout</a>
+                                </li>
+                            <?php else : ?>
+                                <li>
+                                    <a class="<?php active('loginForm.php');?>" href="loginForm.php"><?php echo $isAdminLogin ? 'Dashboard' : 'Login' ?></a>
+                                </li>
+                            <?php endif; ?>
                         </ul>
                     
                     </nav>

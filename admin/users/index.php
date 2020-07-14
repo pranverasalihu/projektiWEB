@@ -27,13 +27,13 @@
 					<td><?php echo $user['user_id']; ?></td>
 					<td><?php echo $user['username']; ?></td>
 					<td><?php echo $user['email']; ?></td>
-					<td><?php echo $user['password']; ?></td>
+					<td><?php echo limit($user['password'], 20); ?></td>
 					<td><?php echo $user['role']; ?></td>
 					<td>
-						<a href="edit.php?id=<?php echo $user['id']; ?>" style="color:green;">
+						<a href="edit.php?id=<?php echo $user['user_id']; ?>" style="color:green;">
 							<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
 						</a>
-						<a href="lib/delete.php?id=<?php echo $user['id']; ?>" style="color:red;">
+						<a href="lib/delete.php?id=<?php echo $user['user_id']; ?>" style="color:red;">
 							<i class="fa fa-times fa-2x" aria-hidden="true"></i>
 						</a>
 					</td>

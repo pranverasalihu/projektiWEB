@@ -1,4 +1,19 @@
-
+<?php
+    session_start();
+    if ( isset( $_SESSION['is_admin'] ) && $_SESSION['is_admin'] ) {
+        header("Location: admin/index.php");
+    }
+    else if ( isset( $_SESSION['is_admin'] ) && !$_SESSION['is_admin'] ) {
+        header("Location: index.php");
+    }
+    
+    require './controller/AuthController.php';
+    $user = new AuthController;
+    $res = null;
+    if(isset($_POST['submitted'])) {
+        $res = $user->login($_POST);
+    }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -19,19 +34,18 @@
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-                <form class="login_box" id="login_form" action="loginForm.php" method="POST"> 
-                   
+                <form class="login_box" id="login_form" action="" method="POST"> 
+                    <?php echo $res && $res != '' ? '<p style="color:red">'. $res .'</p>' : ''; ?>
                     <div class="usernameContainer">
-                        <label>Username</label>
+                        <label for="username">Username</label>
                         <input type="text" name="username" id="username">
                     </div>
                     <div class="passwordContainer">
-                        <label>Password</label>
-                        <input type="password" name="password" id ="password">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password">
                     </div>
-                       
                     <div class="login_button">
-                        <button type=login_button" name="login_button">Login</button>
+                        <button type="submit" name="submitted">Login</button>
                     </div>
                 </form>
                 <div class="login_notregistered">

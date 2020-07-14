@@ -1,6 +1,7 @@
 <?php 	
 // require_once __DIR__ . './connection.php';
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertUser.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -47,7 +48,7 @@ if ( !empty($_POST)) {
             Database::disconnect();*/
 
             $u = new InsertUserForm();
-            $user = $u->editUser($username,$email,$password,$role);
+            $user = $u->editUser($id,$username,$email,$password,$role);
             header("Location: ../index.php");
         }
     }

@@ -69,11 +69,10 @@
         }
     });
     $('.register_button').on('click', function(e){
-        e.preventDefault();
         if(!validateRegister()){
+            e.preventDefault();
             return;
         }
-        $('#register_form').submit();
     });
     function validateRegister() {
         var emailContainer = $('.emailContainer'),
@@ -107,11 +106,10 @@
         return validRegister;
     }
     $('.login_button').on('click', function(e){
-        e.preventDefault();
         if(!validateLogin()){
+            e.preventDefault();
             return;
         }
-        $('#login_form').submit();
     });
     function validateLogin() {
         var usernameContainer = $('.usernameContainer'),

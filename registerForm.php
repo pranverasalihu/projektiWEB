@@ -1,24 +1,15 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertUser.php'); 
+<?php 
     session_start();
+    if ( isset( $_SESSION['is_admin'] ) && $_SESSION['is_admin'] ) {
+        header("Location: admin/index.php");
+    }
 
-if ( !empty($_POST)) {
-
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password =password_hash($_POST['password'], PASSWORD_BCRYPT) ;
-    $role = 2;
-
-    $view = new InsertUserForm();
-    $view->insertUser($username, $email, $password, $role);
-    header('Location: index.php');
-    // $user = new User('albina123', 'albina@123.com', 'a123');
-
-    // $mapper = new UserMapper($user);
-    // $mapper->insert($username, $email, $password,$role);   
-    
-    //$controller = new Controller();
-    //$response = $controller->userInsert($username, $email, $password,$role);
-   }
+    require './controller/AuthController.php';
+    $user = new AuthController;
+    $res = null;
+    if(isset($_POST['submitted'])) {
+        $res = $user->register($_POST);
+    }
 ?>
 <!DOCTYPE html>
     <head>
@@ -39,27 +30,27 @@ if ( !empty($_POST)) {
                 <div class="logo_footer white seperator">
                     <span>V</span>
                 </div>
-                <form class="login_box" id="register_form" action="registerForm.php" method="POST"> 
+                <form class="login_box" id="register_form" action="" method="POST"> 
+                    <?php echo $res && $res != '' ? '<p style="color:red">'. $res .'</p>' : ''; ?>
                     <div class="emailContainer">
-                        <label>Email</label>
+                        <labe for="email">Email</label>
                         <input type="email" name="email" id="email">
                     </div>
                     <div class="usernameContainer">
-                        <label>Username</label>
+                        <label for="username">Username</label>
                         <input type="text" name="username" id="username">
                     </div>
                     <div class="passwordContainer">
-                        <label>Password</label>
+                        <label for="password">Password</label>
                         <input type="password" name="password" id="password">
                     </div>
                     <div class="confirmPasswordContainer">
-                        <label>Confirm Password</label>
+                        <label for="confirmPassword">Confirm Password</label>
                         <input type="password" id="confirmPassword">
                     </div>
-
                   
                     <div class="register_button">
-                        <button name="register_button" class ="register_button">Sign up</button>
+                        <button type="submit" name="submitted">Sign up</button>
                     </div>
                     <div class="login_notregistered">
                         <p>If registered.  

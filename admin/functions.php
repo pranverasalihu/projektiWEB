@@ -13,6 +13,18 @@ function get_admin_url(){
   	return $url;
 }
 
+function get_home_url(){
+	$url = sprintf(
+	    "%s://%s%s",
+	    isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http',
+	    $_SERVER['SERVER_NAME'],
+	    $_SERVER['REQUEST_URI']
+	);
+	  
+  	return explode('/admin', $url)[0];
+}
+
+
 // This function renders site header
 function get_header(){
 	require_once __DIR__ . './parts/header.php';
@@ -45,6 +57,13 @@ function roomLink($roomTitle){
         if(isset($page) && $page == $current_page){
          	echo 'active';
         }
+}
+
+// Limit text function
+function limit($value, $limit = 100, $end = '...')
+{
+	if (strlen($value) <= $limit) return $value;
+	return substr($value, 0, $limit).$end;
 }
 
 //This function return all rooms from db

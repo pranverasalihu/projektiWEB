@@ -11,17 +11,15 @@ class Controller{
 
     //Insert user
     public function userInsert($username, $email, $password,$role){
-       
         $userMapper = new UserMapper();
         $userMapper->insert($username, $email, $password,$role);
         return true;
-       
     }
 
     //update user
-    public function userEdit($username, $email, $password,$role){
+    public function userEdit($userId,$username, $email, $password,$role){
         $userMapper = new UserMapper();
-        $userMapper->update($username, $email, $password,$role);
+        $userMapper->update($userId, $username, $email, $password,$role);
         return true;
     }
 
