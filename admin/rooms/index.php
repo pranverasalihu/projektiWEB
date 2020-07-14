@@ -1,4 +1,6 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+?>
 <?php get_header(); ?>
 <section class="block_section">
 	<div class="row">
@@ -15,7 +17,10 @@
 				</tr>
 			</thead>
 			<tbody>
-			<?php $rooms = get_rooms(); ?>
+			<?php 
+				$r = new ShowRooms();
+				$rooms = $r->get_Rooms(); 
+			?>
 			<?php foreach ($rooms as $room): ?>
 				<tr>
 					<td><?php echo $room['id']; ?></td>

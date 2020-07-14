@@ -1,6 +1,7 @@
 <?php 	
 // require_once __DIR__ . './connection.php';
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertPages.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -94,12 +95,15 @@ if ( !empty($_POST)) {
 			    }
 			}
         }else{
-            $pdo = Database::connect();
+            /*$pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE `pages` SET `title`=?,`description`=?,`excerpt`=? WHERE `id` = ?";
             $q = $pdo->prepare($sql);
             $q->execute(array($title,$description,$excerpt,$id));
-            Database::disconnect();
+            Database::disconnect();*/
+
+            $p = new InsertPages();
+            $pages = $p->editPage($title,$description,$excerpt,$id);
             header("Location: ../index.php");
         }
     }

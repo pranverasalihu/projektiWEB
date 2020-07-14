@@ -1,5 +1,6 @@
 <?php   
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertServices.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -68,7 +69,7 @@ if ( !empty($_POST)) {
                     // insert data
                     $pdo = Database::connect();
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $sql = "INSERT INTO services (title,description,image) values (?, ?, ?,?)";
+                    $sql = "INSERT INTO services (title,description,image) values ( ?, ?,?)";
                     $q = $pdo->prepare($sql);
                     $domain = sprintf( "%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
                     $target_file = str_replace($_SERVER['DOCUMENT_ROOT'], $domain, $target_file);
@@ -81,12 +82,14 @@ if ( !empty($_POST)) {
                 }
             }
         }else{
-            $pdo = Database::connect();
+           /* $pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO services (title,description,image) values (?, ?, ?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($title,$description,''));
-            Database::disconnect();
+            Database::disconnect();*/
+            $s = new InsertServices();
+            $service = $s->insertService($title, $description, $image);
             header("Location: ../index.php");                   
         }
     }

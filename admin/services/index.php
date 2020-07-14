@@ -1,4 +1,7 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
+
+?>
 <?php get_header(); ?>
 <section class="block_section">
 	<div class="row">
@@ -14,7 +17,10 @@
 				</tr>
 			</thead>
 			<tbody>
-			<?php $services = get_services(); ?>
+			<?php 
+				$s = new ShowServices();
+				$services = $s->get_Services(); 
+			?>
 			<?php foreach ($services as $service): ?>
 				<tr>
 					<td><?php echo $service['id']; ?></td>

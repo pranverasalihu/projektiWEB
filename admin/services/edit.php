@@ -1,8 +1,11 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php') ;
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
+?>
 <?php get_header(); ?>
 <?php 
 	$id = isset($_GET['id']) ? $_GET['id'] : null;
-	$service = get_service($id);
+	$services = new ShowServices();
+	$service = $services->get_Service($id);
 ?>
 <section class="block_section">
 	<div class="row">

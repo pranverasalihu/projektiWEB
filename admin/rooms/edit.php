@@ -1,8 +1,11 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	   require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+?>
 <?php get_header(); ?>
 <?php 
 	$id = isset($_GET['id']) ? $_GET['id'] : null;
-	$room = get_room($id);
+	$rooms = new ShowRooms();
+	$room = $rooms->get_Room($id);
 ?>
 <section class="block_section">
 	<div class="row">

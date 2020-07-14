@@ -1,4 +1,6 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php') ;
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showUsers.php');
+?>
 <?php get_header(); ?>
 <section class="block_section">
 	<div class="row">
@@ -16,7 +18,10 @@
 				</tr>
 			</thead>
 			<tbody>
-			<?php $users = get_users(); ?>
+			<?php 
+				$u = new ShowUsers();
+				$users = $u->get_Users(); 
+			?>
 			<?php foreach ($users as $user): ?>
 				<tr>
 					<td><?php echo $user['user_id']; ?></td>

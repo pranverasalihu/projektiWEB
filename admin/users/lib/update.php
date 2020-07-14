@@ -39,12 +39,15 @@ if ( !empty($_POST)) {
     		}
     		echo '<a href="../edit.php?id='.$id.'">Back</a>';
         }else{
-            $pdo = Database::connect();
+            /*$pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE `users` SET `username`=?,`email`=?,`password`=?,`role`=?  WHERE `id` = ?";
             $q = $pdo->prepare($sql);
             $q->execute(array($username,$email,$password,$role,$id));
-            Database::disconnect();
+            Database::disconnect();*/
+
+            $u = new InsertUserForm();
+            $user = $u->editUser($username,$email,$password,$role);
             header("Location: ../index.php");
         }
     }

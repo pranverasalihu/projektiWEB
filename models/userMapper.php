@@ -4,13 +4,13 @@ require_once ('user.php');
 
 class UserMapper
 {
-    private $user;
+    
     private $connection;
-    public function __construct( $user)
+    public function __construct( )
     {
         
         $this->connection = DBConnection::connect();
-        $this->user = $user;
+        
     }
 
     public function insert($username, $email, $password,$role)
@@ -39,6 +39,30 @@ class UserMapper
         $statement->bindParam(":role", $role);
 
         $statement->execute();
+    }
+
+     public function getUsers(){
+
+        $usersQuery = 'SELECT * FROM users';
+        $sth = $this->connection->prepare($usersQuery);
+        $sth->execute();
+        $users = $sth->fetchAll();
+        DBConnection::disconnect(); 
+    
+            return $users;
+    }
+
+    public function getUser($id){
+
+        $usersQuery = 'SELECT * FROM user WHERE id = :id';
+        $sth = $this->connection->prepare($usersQuery);
+        $sth->bindParam(':id', $id);
+        $sth->execute();
+        $user = $sth->fetchAll();
+        
+        if ($user) {
+            return $user[0];
+        }
     }
 
 }

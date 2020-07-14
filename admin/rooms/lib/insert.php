@@ -1,5 +1,6 @@
 <?php 	
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertRooms.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -86,12 +87,15 @@ if ( !empty($_POST)) {
 			    }
 			}
         }else{
-            $pdo = Database::connect();
+            /*$pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO rooms (title,description,image,price) values (?, ?, ?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($title,$description,'',$price));
-            Database::disconnect();
+            Database::disconnect();*/
+
+            $r = new InsertRooms();
+            $rooms= $r->insertRoom($title, $description, $image,$price);
 			header("Location: ../index.php");		            
         }
     }

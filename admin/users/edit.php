@@ -1,8 +1,11 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showUsers.php');
+?>
 <?php get_header(); ?>
 <?php 
 	$id = isset($_GET['id']) ? $_GET['id'] : null;
-	$user = get_user($id);
+	$users = new ShowUsers();
+	$user = $users->get_User($id);
 ?>
 <section class="block_section">
 	<div class="row">

@@ -1,6 +1,5 @@
-<?php
-
-    function active($current_page){
+<?php 
+       function active($current_page){
             $page = basename($_SERVER['PHP_SELF']);
                 if(isset($page) && $page == $current_page){
                  echo 'active';

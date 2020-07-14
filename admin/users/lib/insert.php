@@ -1,5 +1,6 @@
 <?php 	
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertUser.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -39,12 +40,16 @@ if ( !empty($_POST)) {
     		}
     		echo '<a href="../create.php">Back</a>';
     	}else{
-            $pdo = Database::connect();
+            /*$pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "INSERT INTO users (username,email,password,role) values (?, ?,?,?)";
             $q = $pdo->prepare($sql);
             $q->execute(array($username,$email,$password,$role));
             Database::disconnect();
+            */
+            $u = new InsertUserForm();
+            $user = $u->insertUser($username,$email,$password,$role);
+
 			header("Location: ../index.php");		            
         }
     }

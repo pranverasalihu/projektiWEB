@@ -1,4 +1,6 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+?>
 <?php get_header(); ?>
 <section class="block_section">
 	<div class="row">
@@ -15,7 +17,10 @@
 				</tr>
 			</thead>
 			<tbody>
-			<?php $pages = get_pages(); ?>
+			<?php 
+				$p = new ShowPages();
+				$pages = $p->get_Pages(); 
+			?>
 			<?php foreach ($pages as $page): ?>
 				<tr>
 					<td><?php echo $page['id']; ?></td>

@@ -24,7 +24,7 @@ function get_footer(){
 }
 
 //This function return all rooms from db
-function get_rooms(){
+/*function get_rooms(){
 	$pdo = Database::connect(); 
     $roomsQuery = 'SELECT * FROM rooms';
     $sth = $pdo->prepare($roomsQuery);
@@ -117,6 +117,24 @@ function get_service($id){
 	Database::disconnect();	
 	if ($service) {
 		return $service[0];
-	}
-}
+	}*/
+
+	function roomLink($roomTitle){
+      
+        if($roomTitle == 'Single Room'){
+            echo'singleRoom.php';
+        }if($roomTitle == 'Double Room'){
+            echo'doubleRoom.php';
+        }elseif($roomTitle == 'Master Suit'){
+            echo'masterSuit.php';
+        }elseif($roomTitle == 'Premium Suit'){
+            echo'premiumSuit.php';
+        }
+    }
+
+
+
+  
+
+
 

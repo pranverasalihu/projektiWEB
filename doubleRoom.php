@@ -1,3 +1,14 @@
+<?php 
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+    
+    $rooms = new ShowRooms(); 
+    $room = $rooms->get_Room(4);
+    $allRooms = $rooms->get_Rooms();
+
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,28 +46,19 @@
                             <div class="rooms_sidebar">
                                 <li class="top_rooms rooms_price column-mob-12">
                                     <h2>Best Rooms</h2>
+                                    <?php foreach ($allRooms as $oneRoom): ?>
                                     <ul class="rooms_products">
                                         <li class="rooms_display">
-                                            <img width="60" height="60" src="./dist/images/singleRoom.jpg">
-                                            <a href="singleRoom.php">Single Room</a>
-                                            <span> 49.00$</span>
-                                        </li>
-                                        <li>
-                                            <img width="60" height="60" src="./dist/images/doubleRoom.jpg">
-                                            <a href="doubleRoom.php">Double Room</a>
-                                            <span>89.00$</span>
-                                        </li>
-                                        <li>
-                                            <img width="60" height="60" src="./dist/images/premiumSuit.jpg">
-                                            <a href="premiumSuit.php">Premium Suit</a>
-                                            <span>129.00$</span>
-                                        </li>
-                                        <li>
-                                        <img width="60" height="60" src="./dist/images/masterSuit.jpg">
-                                        <a href="masterSuit.php">Master Suit</a>
-                                        <span>229.00$</span>
+                                            <?php if ($oneRoom['image']): ?>
+                                                <img width="60" height="60" src="<?php echo $oneRoom['image']; ?>"  >
+                                                    <?php else: ?>
+                                                        <p>No image Selected</p>
+                                            <?php endif?>
+                                            <a href="<?php roomLink($oneRoom['title']); ?>"><?php echo $oneRoom['title']  ?></a>
+                                            <span> <?php echo $oneRoom['price']  ?></span>
                                         </li>
                                     </ul>
+                                <?php endforeach; ?>
                                 <div class="rooms_reservation">
                                     <p>Reservations</p>
                                     <span>044-100-100</span>
@@ -67,7 +69,11 @@
                                 <div class="row has_gutter">
                                     <div class="column-12 column-mob-12">
                                         <div class="rooms_img">
-                                            <img src="./dist/images/doubleRoom.jpg" alt="">
+                                            <?php if ($room['image']): ?>
+                                                <img src="<?php echo $room['image']; ?>" >
+                                                    <?php else: ?>
+                                                        <p>No image Selected</p>
+                                            <?php endif?>
                                         </div>
                                     </div>
                                 </div> 
@@ -75,22 +81,15 @@
                             <div class="row has_gutter">
                                 <div class="column-7 column-mob-12">
                                     <div class="rooms_title">
-                                        <a href="doubleRoom.php">Double Room</a>
+                                        <a href="doubleRoom.php"><?php echo $room['title'] ?></a>
                                         <div class="rooms_price">
-                                            <span>89.00$</span>
+                                            <span><?php echo $room['price'] ?></span>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="column-7 column-mob-12">               
                                     <div class="rooms_content">
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                                            sed do eiusmod tempor incididunt ut labore et dolore magna
-                                            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                                            ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                                            Duis aute irure dolor in reprehenderit in voluptate velit 
-                                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                                            occaecat cupidatat non proident, sunt in culpa qui officia 
-                                            deserunt mollit anim id est laborum.</p>
+                                        <p><?php echo $room['description'] ?></p>
                                     </div>
                                 </div>
                             </div>

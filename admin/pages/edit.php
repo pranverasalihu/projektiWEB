@@ -1,8 +1,11 @@
-<?php require_once('./../functions.php') ?>
+<?php require_once('./../functions.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+?>
 <?php get_header(); ?>
 <?php 
 	$id = isset($_GET['id']) ? $_GET['id'] : null;
-	$page = get_page($id);
+	$p = new ShowPages();
+	$page = $p->get_Page($id);
 ?>
 <section class="block_section">
 	<div class="row">

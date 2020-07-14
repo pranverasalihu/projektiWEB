@@ -1,6 +1,7 @@
 <?php   
 // require_once __DIR__ . './connection.php';
 require_once('./../../connection.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertServices.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -93,12 +94,15 @@ if ( !empty($_POST)) {
                 }
             }
         }else{
-            $pdo = Database::connect();
+            /*$pdo = Database::connect();
             $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $sql = "UPDATE `services` SET `title`=?,`description`=? WHERE `id` = ?";
             $q = $pdo->prepare($sql);
             $q->execute(array($title,$description,$id));
-            Database::disconnect();
+            Database::disconnect();*/
+
+            $s = new InsertServices();
+            $service = $s->editService($title, $description, $id);
             header("Location: ../index.php");
         }
     }

@@ -1,9 +1,11 @@
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
-
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+    
     $rooms = new ShowRooms(); 
     $room = $rooms->get_Room(3);
     $allRooms = $rooms->get_Rooms();
+
 
 
 ?>
@@ -44,16 +46,16 @@
                             <div class="rooms_sidebar">
                                 <li class="top_rooms rooms_price column-mob-12">
                                     <h2>Best Rooms</h2>
-                                     <?php foreach ($allRooms as $room): ?>
+                                     <?php foreach ($allRooms as $oneRoom): ?>
                                     <ul class="rooms_products">
                                         <li class="rooms_display">
-                                             <?php if ($room['image']): ?>
-                                                <img width="60" height="60" src="<?php echo $room['image']; ?>"  >
+                                             <?php if ($oneRoom['image']): ?>
+                                                <img width="60" height="60" src="<?php echo $oneRoom['image']; ?>"  >
                                                     <?php else: ?>
                                                         <p>No image Selected</p>
                                             <?php endif?>
-                                            <a href="singleRoom.php"><?php echo $room['title']  ?></a>
-                                            <span><?php echo $room['price']  ?></span>
+                                            <a href="<?php roomLink($oneRoom['title']);?>"><?php echo $oneRoom['title']  ?></a>
+                                            <span><?php echo $oneRoom['price']  ?></span>
                                         </li>
                                     </ul>
                                 <?php endforeach; ?>

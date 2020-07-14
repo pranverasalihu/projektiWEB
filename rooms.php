@@ -1,19 +1,21 @@
 <?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
-    $room = new ShowRooms();
-    $rooms = $room->get_Rooms();
+     require ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+   
+    $rooms = new ShowRooms();
+    $allRooms = $rooms->get_Rooms();
 
-    function roomLink($roomTitle){
+      /*function roomLink($roomTitle){
       
-        if($roomTitle == 'Single Room'){
-            echo'singleRoom.php';
-        }if($roomTitle == 'Double Room'){
-            echo'doubleRoom.php';
-        }elseif($roomTitle == 'Master Suit'){
-            echo'masterSuit.php';
-        }elseif($roomTitle == 'Premium Suit'){
-            echo'premiumSuit.php';
-        }
-    }
+            if($roomTitle == 'Single Room'){
+                echo'singleRoom.php';
+            }if($roomTitle == 'Double Room'){
+                echo'doubleRoom.php';
+            }elseif($roomTitle == 'Master Suit'){
+                echo'masterSuit.php';
+            }elseif($roomTitle == 'Premium Suit'){
+                echo'premiumSuit.php';
+            }
+        }*/
     
 
 ?>
@@ -54,7 +56,7 @@
                             <div class="rooms_sidebar" >
                                 <li class="top_rooms rooms_price column-mob-12">
                                     <h2>Best Rooms</h2>
-                                    <?php foreach ($rooms as $room): ?>
+                                    <?php foreach ($allRooms as $room): ?>
                                     <ul class="rooms_products">
                                         <li class="rooms_display">
                                              <?php if ($room['image']): ?>
@@ -75,7 +77,7 @@
                             
                             </div>
                            
-                            <?php foreach ($rooms as $room): ?>
+                            <?php foreach ($allRooms as $room): ?>
                             <div class="rooms"> 
                                 <div class="row has_gutter">
                                     <div class="column-4 column-mob-12" >
@@ -89,7 +91,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12" >
                                         <div class="rooms_title">
-                                            <a href="<?php roomLink($room['title']); ?>"><?php echo $room['title'] ?></a>
+                                            <a href="<?php roomLink($room['title']);?>"><?php echo $room['title'] ?></a>
                                             <div class="rooms_price">
                                                 <span><?php echo $room['price'] ?></span>
                                             </div>
@@ -97,7 +99,7 @@
                                         <div class="rooms_content">
                                             <p><?php echo $room['description'] ?> </p>
                                                 <div class="room_title ">
-                                                    <a href="<?php roomLink($room['title']); ?>">Book now</a>
+                                                    <a href="<?php roomLink($room['title']);?>">Book now</a>
                                                 </div>
                                         </div>
                                     </div>
