@@ -1,4 +1,4 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertUser.php'); 
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertUser.php'); 
     session_start();
 
 if ( !empty($_POST)) {

@@ -1,4 +1,4 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php'); ?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php'); ?>
 <header id="header" class="main_header">
             <div class="container">
                 <div class="headerWrap">

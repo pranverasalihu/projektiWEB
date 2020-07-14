@@ -1,10 +1,10 @@
 <?php
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/userMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/user.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/DBConn.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/roomsMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/servicesMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/pagesMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/userMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/user.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/DBConn.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/roomsMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/servicesMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/pagesMapper.php');
 
 class Controller{   
 
