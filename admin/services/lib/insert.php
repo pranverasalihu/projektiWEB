@@ -1,6 +1,7 @@
 <?php   
 require_once('./../../connection.php');
 require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertServices.php');
+//require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertServices.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
