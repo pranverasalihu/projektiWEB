@@ -1,3 +1,9 @@
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+      require ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+   
+    $pages = new ShowPages();
+    $page = $pages->get_Page(1);
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -35,25 +41,42 @@
                         <div class="row has_gutter">
                             <div class="column-6 column-mob-12">
                                 <div class="aboutUs_image">
-                                    <img src="./dist/images/aboutUs_hotel.jpg" alt="">
+
+                        <div class="slideshow-container"></div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/aboutUs_hotel.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/bar.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/food.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/pool.jpg" style="width:500px;height:300px;">
+                        </div>
+
+                        <div class="mySlides fadeSlider">
+                            <img src="./dist/images/massage.jpg" style="width:500px;height:300px;">
+                        </div>
+
+
+                                    <!-- <img src="./dist/images/aboutUs_hotel.jpg" alt=""> -->
                                 </div>
+
+                                
                             </div>
+
                             <div class="column-6 column-mob-12">
                                 <div class="about_title">
-                                    <h1>About Us</h1>
+                                    <h1><?php echo $page['title'];?></h1>
                                 </div>
                                 <div class="about_content">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
-                                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                                        deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur 
-                                        adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                                        ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p><?php echo $page['description'] ;?></p>
                                 </div>
                             </div>
                         </div> 

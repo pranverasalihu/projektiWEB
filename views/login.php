@@ -24,8 +24,8 @@ class Login
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['role'] = $user['role'];
-            header("Location: index.php");
-            
+            //header("Location: index.php");
+            return true;
         }
     }
 }
