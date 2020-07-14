@@ -1,23 +1,8 @@
 <?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
-     require ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
+      require ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
    
     $rooms = new ShowRooms();
     $allRooms = $rooms->get_Rooms();
-
-      /*function roomLink($roomTitle){
-      
-            if($roomTitle == 'Single Room'){
-                echo'singleRoom.php';
-            }if($roomTitle == 'Double Room'){
-                echo'doubleRoom.php';
-            }elseif($roomTitle == 'Master Suit'){
-                echo'masterSuit.php';
-            }elseif($roomTitle == 'Premium Suit'){
-                echo'premiumSuit.php';
-            }
-        }*/
-    
-
 ?>
 <!DOCTYPE html>
 <html>

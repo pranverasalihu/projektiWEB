@@ -5,9 +5,6 @@
     $rooms = new ShowRooms(); 
     $room = $rooms->get_Room(3);
     $allRooms = $rooms->get_Rooms();
-
-
-
 ?>
 <!DOCTYPE html>
 <html>

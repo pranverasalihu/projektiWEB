@@ -30,7 +30,7 @@ class RoomsMapper
 
     public function update($title,$description,$price,$id){
 
-        $sql = "UPDATE services SET title=:title, description =:description, price = :price WHERE id = :id";
+        $sql = "UPDATE rooms SET title=:title, description =:description, price = :price WHERE id = :id";
 
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(":title", $title);

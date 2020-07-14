@@ -23,6 +23,30 @@ function get_footer(){
 	require_once __DIR__ . './parts/footer.php';
 }
 
+
+//change room links 
+function roomLink($roomTitle){
+      
+	if($roomTitle == 'Single Room'){
+   		echo'singleRoom.php';
+	}if($roomTitle == 'Double Room'){
+    	echo'doubleRoom.php';
+	}elseif($roomTitle == 'Master Suit'){
+    	echo'masterSuit.php';  
+	}elseif($roomTitle == 'Premium Suit'){
+    	echo'premiumSuit.php';
+	}
+}
+
+
+//put active in the current page
+ function active($current_page){
+    $page = basename($_SERVER['PHP_SELF']);
+        if(isset($page) && $page == $current_page){
+         	echo 'active';
+        }
+}
+
 //This function return all rooms from db
 /*function get_rooms(){
 	$pdo = Database::connect(); 
@@ -119,18 +143,7 @@ function get_service($id){
 		return $service[0];
 	}*/
 
-	function roomLink($roomTitle){
-      
-        if($roomTitle == 'Single Room'){
-            echo'singleRoom.php';
-        }if($roomTitle == 'Double Room'){
-            echo'doubleRoom.php';
-        }elseif($roomTitle == 'Master Suit'){
-            echo'masterSuit.php';
-        }elseif($roomTitle == 'Premium Suit'){
-            echo'premiumSuit.php';
-        }
-    }
+	
 
 
 

@@ -1,11 +1,4 @@
-<?php 
-       function active($current_page){
-            $page = basename($_SERVER['PHP_SELF']);
-                if(isset($page) && $page == $current_page){
-                 echo 'active';
-            }
-    }
-?>
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php'); ?>
 <header id="header" class="main_header">
             <div class="container">
                 <div class="headerWrap">
