@@ -1,15 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.1
+-- version 4.9.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
-
--- Generation Time: Jul 15, 2020 at 09:24 PM
-
--- Generation Time: Jul 15, 2020 at 09:01 PM
-
--- Server version: 10.4.11-MariaDB
--- PHP Version: 7.4.3
+-- Generation Time: Jul 15, 2020 at 10:21 PM
+-- Server version: 10.4.8-MariaDB
+-- PHP Version: 7.3.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -45,7 +41,8 @@ CREATE TABLE `contact` (
 --
 
 INSERT INTO `contact` (`contact_id`, `name`, `email`, `subject`, `message`) VALUES
-(14, 'albina ilazi', 'albina.ilazi@blabla.com', 'subject test', 'message test');
+(14, 'albina ilazi', 'albina.ilazi@blabla.com', 'subject test', 'message test'),
+(15, 'pranvera', 'pranverasalihu1@gmail.com', 'test', 'test message');
 
 -- --------------------------------------------------------
 
@@ -113,10 +110,10 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `title`, `price`, `description`, `image`, `created_at`, `user_id`) VALUES
-(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15', 1),
-(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/projektiWEB-master/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39', 3),
-(9, 'asd', '12.00', 'asdasd', 'http://localhost/projektiweb-master/admin/images/uploads/aboutUs_hotel.jpg', '2020-07-15 19:02:49', 2);
-
+(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15', 1),
+(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/2020/vanoa/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39', 3),
+(9, 'Master Suit', '12.00', 'asdasd  d  ', 'http://localhost/2020/vanoa/admin/images/uploads/masterSuit.jpg', '2020-07-15 19:02:49', 2),
+(12, 'Single room ', '80.52', 'sadasdasdasds  ', 'http://localhost/2020/vanoa/admin/images/uploads/singleRoom.jpg', '2020-07-15 20:02:36', 3);
 
 -- --------------------------------------------------------
 
@@ -138,11 +135,10 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `description`, `image`, `created_at`, `user_id`) VALUES
-(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33', 1),
-(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/food.jpg', '2020-07-11 17:55:44', 2),
-(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05', 3),
-(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19', 1);
-
+(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33', 1),
+(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/food.jpg', '2020-07-11 17:55:44', 2),
+(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05', 3),
+(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19', 1);
 
 -- --------------------------------------------------------
 
@@ -168,8 +164,7 @@ INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`) VALUES
 (3, 'pranvera', 'pranvera@ubt-uni.net', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 1),
 (23, 'dadasdasda', 'albina@ilazi.com', '$2y$10$EEPXuPoNzZDVaYnK6QeNx.1vA5eEGayx.yq8Hv/ysQlsuZGdyEaju', 2),
 (24, 'albina123', 'albina12345@ilazi.com', '$2y$10$6LECsqG8QWfcHtr.omz3g.IrF765NPRnkEsQj0E8MR8VUsMXFG2vu', 2),
-(25, 'test', 'test.test@test.com', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 2),
-(26, 'lorik', 'loriksalihu9@gmail.com', '$2y$10$OZpSr1xkqT15Mzsr7Uc94O0pJjbN06db86SAcG22BhY7V29fcov2K', 2);
+(25, 'test', 'test.test@test.com', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 2);
 
 --
 -- Indexes for dumped tables
@@ -220,7 +215,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `contact_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `contact_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -238,9 +233,7 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
-
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `services`
