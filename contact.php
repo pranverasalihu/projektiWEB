@@ -48,6 +48,7 @@
                         <form class="contact_form has_gutter" id="contact_form" action="contact.html" method="POST">
                             <div class="row">
                                 <div class="column-6 nameContainer">
+                                
                                     <label class="">Name</label>
                                     <input type="text" id="name">
                                 </div>
