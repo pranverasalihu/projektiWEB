@@ -1,7 +1,7 @@
 <?php 	
 // require_once __DIR__ . './connection.php';
 require_once('./../../connection.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertRooms.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertRooms.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -37,7 +37,7 @@ if ( !empty($_POST)) {
     		echo '<a href="../edit.php?id='.$id.'">Back</a>';
         }
         elseif($_FILES['image']['name'] !== ''){
-	        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/2020/vanoa/admin/images/uploads/";
+	        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/projektiWEB-master/admin/images/uploads/";
 			$target_file = $target_dir . basename($_FILES["image"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

@@ -1,4 +1,4 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showServices.php');
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
     $service = new ShowServices();
     $services = $service->get_Services();
 

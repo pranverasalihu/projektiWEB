@@ -1,9 +1,9 @@
 <?php
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showRooms.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
     
     $rooms = new ShowRooms(); 
-    $room = $rooms->get_Room(3);
+    $room = $rooms->get_Room(8);
     $allRooms = $rooms->get_Rooms();
 ?>
 <!DOCTYPE html>

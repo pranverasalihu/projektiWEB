@@ -1,5 +1,5 @@
-<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showPages.php');
-      require ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php');
+<?php require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+      require ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
    
     $pages = new ShowPages();
     $page = $pages->get_Page(1);
