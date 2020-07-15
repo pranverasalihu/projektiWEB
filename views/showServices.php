@@ -1,5 +1,5 @@
 <?php
-require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/controller/controller.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/controller/controller.php');
 
 	class ShowServices
 	{

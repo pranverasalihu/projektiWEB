@@ -1,6 +1,6 @@
 <?php   
 require_once('./../../connection.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertServices.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/insertServices.php');
 
 
 if ( !empty($_POST)) {
@@ -30,7 +30,7 @@ if ( !empty($_POST)) {
             }
             echo '<a href="../create.php">Back</a>';
         }elseif($_FILES['image']['name'] !== ''){
-            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/2020/vanoa/admin/images/uploads/";
+            $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/projektiweb-master/admin/images/uploads/";
             $target_file = $target_dir . basename($_FILES["image"]["name"]);
             $uploadOk = 1;
             $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
