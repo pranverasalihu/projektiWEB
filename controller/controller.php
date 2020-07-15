@@ -5,6 +5,7 @@
  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/roomsMapper.php');
  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/servicesMapper.php');
  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/pagesMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/contactMapper.php');
 
 class Controller{   
 
@@ -130,6 +131,12 @@ class Controller{
         $pagesMapper = new PagesMapper();
         $page = $pagesMapper->getPage($id);
         return $page;
+    }
+
+    public function get_contacts(){
+        $contactMapper = new ContactMapper();
+        $contact = $contactMapper->getContacts();
+        return $contact;
     }
 
   

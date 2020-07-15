@@ -22,7 +22,7 @@ class AuthController
         $query->execute();
 
         $user = $query->fetch();
-        if($user&& count($user) > 0 && password_verify($request['password'], $user['password']) ){
+        if($user&& count($user) > 0 && $request['password'] == $user['password'] /*&& password_verify($request['password'], $user['password'])*/ ){
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
             $_SESSION['is_admin'] = $user['role'] == 1 ? true : false;

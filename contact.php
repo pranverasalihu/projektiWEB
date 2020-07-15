@@ -1,3 +1,21 @@
+<?php
+
+    if(isset($_POST['name'])) {
+        
+        require './models/contactMapper.php';
+        $contactMapper = new ContactMapper;
+
+        $name = $_POST['name'];
+        $email = $_POST['email'];
+        $subject = $_POST['subject'];
+        $message = $_POST['message'];
+
+        $contactMapper->insert($name, $email, $subject,$message);
+
+        header("Location: contact.php");
+    }
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -45,33 +63,33 @@
                 </section>
                 <section class="block_section contact_section">
                     <div class="container">
-                        <form class="contact_form has_gutter" id="contact_form" action="contact.html" method="POST">
+                        <form class="contact_form has_gutter" id="contact_form" action="" method="POST">
                             <div class="row">
                                 <div class="column-6 nameContainer">
                                 
                                     <label class="">Name</label>
-                                    <input type="text" id="name">
+                                    <input type="text" id="name" name="name">
                                 </div>
                                 <div class="column-6 emailContainer">
                                     <label>Email</label>
-                                    <input type="email" id="email">
+                                    <input type="email" id="email" name="email">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="column-12 subjectContainer">
                                     <label>Subject</label>
-                                    <input type="text" id="subject">
+                                    <input type="text" id="subject" name="subject">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="column-12 messageContainer">
                                     <label>Message</label>
-                                    <textarea rows="3" id="message"></textarea>
+                                    <textarea rows="3" id="message" name="message"></textarea>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="column-12">
-                                    <button class="contact_button">Send</button>  
+                                    <button class="contact_button" type="submit" name="submitted">Send</button>  
                                 </div> 
                             </div>
                         </form>

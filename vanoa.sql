@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2020 at 10:28 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Jul 13, 2020 at 03:38 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.4.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -84,10 +84,10 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `title`, `price`, `description`, `image`, `created_at`) VALUES
-(3, 'Single Room', '49.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  ', 'http://localhost/2020/vanoa/admin/images/uploads/singleRoom.jpg', '2020-06-13 23:36:28'),
-(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15'),
-(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/2020/vanoa/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39'),
-(6, 'Master Suit', '229.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/2020/vanoa/admin/images/uploads/masterSuit.jpg', '2020-06-28 18:51:41');
+(3, 'Single Room', '49.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  ', 'http://localhost/projektiWEB-master/admin/images/uploads/singleRoom.jpg', '2020-06-13 23:36:28'),
+(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15'),
+(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/projektiWEB-master/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39'),
+(6, 'Master Suit', '229.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/projektiWEB-master/admin/images/uploads/masterSuit.jpg', '2020-06-28 18:51:41');
 
 -- --------------------------------------------------------
 
@@ -108,10 +108,10 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `description`, `image`, `created_at`) VALUES
-(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33'),
-(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/food.jpg', '2020-07-11 17:55:44'),
-(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05'),
-(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19');
+(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33'),
+(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/food.jpg', '2020-07-11 17:55:44'),
+(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05'),
+(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19');
 
 -- --------------------------------------------------------
 
@@ -132,11 +132,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`) VALUES
-(1, 'krenare', 'krenare@ubt-uni.net', '$2y$10$NdLuCtEJeI/nCGj.KBbGDeI7LcVRrPj9aXcb5d./.bMr/iMH9lEY.', 1),
-(2, 'albina', 'albina@ubt-uni.net', '$2y$10$OcL182Ka3IsQ5GJ5BK2cmOd3Wh2CBOM/H/RjWXWymQQRToAVTO0DW', 1),
-(3, 'pranvera', 'pranvera@ubt-uni.net', '$2y$10$UGcyBUD7nd3kcPCcW2FTH.ahy.CHw6NQ5x5s2Lgjvts0YGpLuaWUO', 1),
-(28, 'lika', 'loriksalihu9@gmail.com', '$2y$10$F0BjmoWchFPZdZzY8CkJyu4I5wuYf53Ee7OymTjRdhHWmoDS18AlK', 2),
-(30, 'shyqa', 'shyqa@gmail.com', '$2y$10$I52vlvB1oTcKWA7AYZqBEOoe2c5p.kSNxqr/YadCGqEt50xQuVI7i', 2);
+(1, 'krenare', 'krenare@ubt-uni.net', 'krenare', 1),
+(2, 'albina', 'albina@ubt-uni.net', 'albina', 1),
+(3, 'pranvera', 'pranvera@ubt-uni.net', 'pranvera', 1);
 
 --
 -- Indexes for dumped tables
@@ -205,7 +203,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- Constraints for dumped tables
