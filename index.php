@@ -65,11 +65,11 @@
                         <div class="services_title">
                             <h1>OUR SERVICES</h1>
                         </div>
-                         <?php 
-                             $s = new ShowServices();
-                             $services = $s->get_Services();
+                        <?php 
+                            $s = new ShowServices();
+                            $services = $s->get_Services();
 
-                             foreach ($services as $service):
+                            foreach ($services as $service):
                         ?>
                         <div class="row has_gutter">
                             <div class="column-3 column-mob-12">
@@ -96,8 +96,8 @@
                             <h1>FAVORITE ROOMS</h1>
                         </div>
                         <?php 
-                             $r = new ShowRooms();
-                             $rooms = $r->get_Rooms();
+                            $r = new ShowRooms();
+                            $rooms = $r->get_Rooms();
                             foreach ($rooms as $room):
                         ?>
                         <div class="row has_gutter">
