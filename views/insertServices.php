@@ -1,6 +1,6 @@
 <?php
 
-require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/2020/vanoa/controller/controller.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/2020/vanoa/controller/controller.php');
 
     
 

@@ -1,5 +1,5 @@
 <?php require_once('./../functions.php');
-	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showRooms.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showRooms.php');
 ?>
 <?php get_header(); ?>
 <section class="block_section">

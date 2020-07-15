@@ -1,7 +1,7 @@
 <?php
 
-require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/DBConn.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/insertUser.php'); 
+require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/DBConn.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertUser.php'); 
 
 
 class AuthController
