@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.1
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 14, 2020 at 10:28 PM
--- Server version: 10.4.8-MariaDB
--- PHP Version: 7.3.11
+-- Generation Time: Jul 15, 2020 at 07:23 PM
+-- Server version: 10.4.11-MariaDB
+-- PHP Version: 7.2.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -21,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `vanoa`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `contact_id` bigint(20) NOT NULL,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `subject` varchar(100) NOT NULL,
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`contact_id`, `name`, `email`, `subject`, `message`) VALUES
+(14, 'albina ilazi', 'albina.ilazi@blabla.com', 'subject test', 'message test');
 
 -- --------------------------------------------------------
 
@@ -84,10 +104,8 @@ CREATE TABLE `rooms` (
 --
 
 INSERT INTO `rooms` (`id`, `title`, `price`, `description`, `image`, `created_at`) VALUES
-(3, 'Single Room', '49.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse  ', 'http://localhost/2020/vanoa/admin/images/uploads/singleRoom.jpg', '2020-06-13 23:36:28'),
-(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15'),
-(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/2020/vanoa/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39'),
-(6, 'Master Suit', '229.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/2020/vanoa/admin/images/uploads/masterSuit.jpg', '2020-06-28 18:51:41');
+(4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15'),
+(5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/projektiWEB-master/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39');
 
 -- --------------------------------------------------------
 
@@ -108,10 +126,10 @@ CREATE TABLE `services` (
 --
 
 INSERT INTO `services` (`id`, `title`, `description`, `image`, `created_at`) VALUES
-(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33'),
-(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/food.jpg', '2020-07-11 17:55:44'),
-(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05'),
-(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19');
+(1, 'MASSAGE', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/massage.jpg', '2020-07-11 17:54:33'),
+(2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/food.jpg', '2020-07-11 17:55:44'),
+(4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05'),
+(7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19');
 
 -- --------------------------------------------------------
 
@@ -132,15 +150,22 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`) VALUES
-(1, 'krenare', 'krenare@ubt-uni.net', '$2y$10$NdLuCtEJeI/nCGj.KBbGDeI7LcVRrPj9aXcb5d./.bMr/iMH9lEY.', 1),
-(2, 'albina', 'albina@ubt-uni.net', '$2y$10$OcL182Ka3IsQ5GJ5BK2cmOd3Wh2CBOM/H/RjWXWymQQRToAVTO0DW', 1),
-(3, 'pranvera', 'pranvera@ubt-uni.net', '$2y$10$UGcyBUD7nd3kcPCcW2FTH.ahy.CHw6NQ5x5s2Lgjvts0YGpLuaWUO', 1),
-(28, 'lika', 'loriksalihu9@gmail.com', '$2y$10$F0BjmoWchFPZdZzY8CkJyu4I5wuYf53Ee7OymTjRdhHWmoDS18AlK', 2),
-(30, 'shyqa', 'shyqa@gmail.com', '$2y$10$I52vlvB1oTcKWA7AYZqBEOoe2c5p.kSNxqr/YadCGqEt50xQuVI7i', 2);
+(1, 'krenare', 'krenare@ubt-uni.net', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 1),
+(2, 'albina', 'albina@ubt-uni.net', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 1),
+(3, 'pranvera', 'pranvera@ubt-uni.net', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 1),
+(23, 'dadasdasda', 'albina@ilazi.com', '$2y$10$EEPXuPoNzZDVaYnK6QeNx.1vA5eEGayx.yq8Hv/ysQlsuZGdyEaju', 2),
+(24, 'albina123', 'albina12345@ilazi.com', '$2y$10$6LECsqG8QWfcHtr.omz3g.IrF765NPRnkEsQj0E8MR8VUsMXFG2vu', 2),
+(25, 'test', 'test.test@test.com', '$2y$10$vezoNjZn8bE5dS6plk7h4OMoXLVjsE0TjDKit4wiNzUIoWXrdSPDa', 2);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`contact_id`);
 
 --
 -- Indexes for table `pages`
@@ -178,6 +203,12 @@ ALTER TABLE `users`
 --
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `contact_id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
 -- AUTO_INCREMENT for table `pages`
 --
 ALTER TABLE `pages`
@@ -205,7 +236,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `user_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- Constraints for dumped tables
