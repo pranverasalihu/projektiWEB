@@ -1,6 +1,6 @@
 <?php 	
 require_once('./../../connection.php');
-require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertPages.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/insertPages.php');
 
 if ( !empty($_POST)) {
         // keep track validation errors
