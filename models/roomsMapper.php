@@ -13,16 +13,18 @@ class RoomsMapper
     }
 
 
-    public function insert($title, $description, $image,$price){
+    public function insert($title, $description,$price){
 
-        $sql = "INSERT INTO rooms (title,description,image,price) VALUES (:title,:description,:image, :price)";
+        $sql = "INSERT INTO rooms (title,description,price, user_id) VALUES (:title,:description, :price, :user_id)";
 
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(":title", $title);
         $statement->bindParam(":description", $description);
-        $statement->bindParam(":image", $image);
+        //$statement->bindParam(":image", $image);
         $statement->bindParam(":price", $price);
-      
+
+        session_start();
+        $statement->bindParam(":user_id", $_SESSION['user_id']);
 
         $statement->execute();
     }
@@ -45,7 +47,7 @@ class RoomsMapper
 
     public function getRooms(){
 
-        $roomsQuery = 'SELECT * FROM rooms';
+        $roomsQuery = 'SELECT r.*, u.username FROM rooms r LEFT JOIN users u ON r.user_id = u.user_id';
         $sth = $this->connection->prepare($roomsQuery);
         $sth->execute();
         $rooms = $sth->fetchAll();

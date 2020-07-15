@@ -1,16 +1,16 @@
 <?php
 
-require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/2020/vanoa/controller/controller.php');
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/controller/controller.php');
 
     
 
 class InsertServices
 {
-    public function insertService($title, $description, $image)
+    public function insertService($title, $description)
     {
 
         $controller = new Controller();
-        $response = $controller->serviceInsert($title, $description, $image);
+        $response = $controller->serviceInsert($title, $description);
 
 
     }

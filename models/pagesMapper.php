@@ -13,16 +13,18 @@ class PagesMapper
     }
 
 	public function insert($title,$description,$image,$excerpt){
-
-        $sql = "INSERT INTO pages (title,description,image,excerpt) values (:title,:description,:image,:excerpt)";
-
+        
+        $sql = "INSERT INTO pages (title,description,image,excerpt,user_id) values (:title,:description,:image,:excerpt, :user_id)";
+        
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(":title", $title);
         $statement->bindParam(":description", $description);
         $statement->bindParam(":image", $image);
         $statement->bindParam(":excerpt", $excerpt);
-      
 
+        session_start();
+        $statement->bindParam(":user_id", $_SESSION['user_id']);
+      
         $statement->execute();
     }
 
@@ -45,7 +47,7 @@ class PagesMapper
 
     public function getPages(){
     
-    	$pagesQuery = 'SELECT * FROM pages';
+    	$pagesQuery = 'SELECT p.*, u.username FROM pages p LEFT JOIN users u ON p.user_id = u.user_id';
     	$sth = $this->connection->prepare($pagesQuery);
     	$sth->execute();	
     	$pages = $sth->fetchAll();

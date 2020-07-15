@@ -6,11 +6,11 @@ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/controller/controll
 
 class InsertRooms
 {
-    public function insertRoom($title, $description, $image,$price)
+    public function insertRoom($title, $description,$price)
     {
 
         $controller = new Controller();
-        $response = $controller->roomInsert($title, $description, $image,$price);
+        $response = $controller->roomInsert($title, $description,$price);
 
 
     }
