@@ -1,6 +1,6 @@
 <?php
 
- require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/models/DBConn.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/DBConn.php');
 
 class Login
 {
