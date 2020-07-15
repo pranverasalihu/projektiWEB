@@ -1,9 +1,11 @@
 <?php
     require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/views/showRooms.php');
     require_once ($_SERVER['DOCUMENT_ROOT'].'/2020/vanoa/admin/functions.php');
-    
+    if(!isset($_GET['id'])){
+		header("Location:  rooms.php");
+    }
     $rooms = new ShowRooms(); 
-    $room = $rooms->get_Room(8);
+    $room = $rooms->get_Room($_GET['id']);
     $allRooms = $rooms->get_Rooms();
 ?>
 <!DOCTYPE html>
@@ -51,7 +53,7 @@
                                                     <?php else: ?>
                                                         <p>No image Selected</p>
                                             <?php endif?>
-                                            <a href="<?php roomLink($oneRoom['title']);?>"><?php echo $oneRoom['title']  ?></a>
+                                            <a href="singleRoom.php?id=<?php echo $oneRoom['id']; ?>"><?php echo $oneRoom['title']  ?></a>
                                             <span><?php echo $oneRoom['price']  ?></span>
                                         </li>
                                     </ul>
@@ -78,7 +80,7 @@
                             <div class="row has_gutter">
                                 <div class="column-7 column-mob-12">
                                     <div class="rooms_title">
-                                        <a href="singleRoom.php"><?php echo $room['title'] ?></a>
+                                        <a href="javascript:void(0)"><?php echo $room['title'] ?></a>
                                         <div class="rooms_price">
                                             <span><?php echo $room['price'] ?></span>
                                         </div>

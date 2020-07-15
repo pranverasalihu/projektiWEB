@@ -49,7 +49,7 @@
                                                     <?php else: ?>
                                                         <p>No image Selected</p>
                                             <?php endif?>
-                                            <a href="<?php roomLink($room['title']); ?>"><?php echo $room['title'] ?></a>
+                                            <a href="singleRoom.php?id=<?php echo $room['id']; ?>"><?php echo $room['title'] ?></a>
                                             <span> <?php echo $room['price'] ?></span>
                                         </li>
                                     </ul>
@@ -76,7 +76,7 @@
                                     </div>
                                     <div class="column-8 column-mob-12" >
                                         <div class="rooms_title">
-                                            <a href="<?php roomLink($room['title']);?>"><?php echo $room['title'] ?></a>
+                                            <a href="singleRoom.php?id=<?php echo $room['id']; ?>"><?php echo $room['title'] ?></a>
                                             <div class="rooms_price">
                                                 <span><?php echo $room['price'] ?></span>
                                             </div>
@@ -84,7 +84,7 @@
                                         <div class="rooms_content">
                                             <p><?php echo $room['description'] ?> </p>
                                                 <div class="room_title ">
-                                                    <a href="<?php roomLink($room['title']);?>">Book now</a>
+                                                    <a href="singleRoom.php?id=<?php echo $room['id']; ?>">Book now</a>
                                                 </div>
                                         </div>
                                     </div>

@@ -36,21 +36,6 @@ function get_footer(){
 }
 
 
-//change room links 
-function roomLink($roomTitle){
-      
-	if($roomTitle == 'Single Room'){
-   		echo'singleRoom.php';
-	}if($roomTitle == 'Double Room'){
-    	echo'doubleRoom.php';
-	}elseif($roomTitle == 'Master Suit'){
-    	echo'masterSuit.php';  
-	}elseif($roomTitle == 'Premium Suit'){
-    	echo'premiumSuit.php';
-	}
-}
-
-
 //put active in the current page
  function active($current_page){
     $page = basename($_SERVER['PHP_SELF']);

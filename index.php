@@ -111,7 +111,7 @@
                                 </div>
                                 <div class="room_title">
                                     <h1><?php echo $room['title']; ?></h1>
-                                    <a href="<?php roomLink($room['title']); ?>">BOOK NOW</a>
+                                    <a href="singleRoom.php?id=<?php echo $room['id']; ?>">BOOK NOW</a>
                                 </div>
                             </div>
                         </div>
