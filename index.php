@@ -1,8 +1,8 @@
 <?php 
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showRooms.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showServices.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showPages.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/admin/functions.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
 ?>
 
 <!DOCTYPE html>
@@ -65,11 +65,11 @@
                         <div class="services_title">
                             <h1>OUR SERVICES</h1>
                         </div>
-                         <?php 
-                             $s = new ShowServices();
-                             $services = $s->get_Services();
+                        <?php 
+                            $s = new ShowServices();
+                            $services = $s->get_Services();
 
-                             foreach ($services as $service):
+                            foreach ($services as $service):
                         ?>
                         <div class="row has_gutter">
                             <div class="column-3 column-mob-12">
@@ -96,8 +96,8 @@
                             <h1>FAVORITE ROOMS</h1>
                         </div>
                         <?php 
-                             $r = new ShowRooms();
-                             $rooms = $r->get_Rooms();
+                            $r = new ShowRooms();
+                            $rooms = $r->get_Rooms();
                             foreach ($rooms as $room):
                         ?>
                         <div class="row has_gutter">

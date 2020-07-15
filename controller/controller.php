@@ -1,11 +1,11 @@
 <?php
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/userMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/user.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/DBConn.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/roomsMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/servicesMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/pagesMapper.php');
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/contactMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/userMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/user.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/DBConn.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/roomsMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/servicesMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/pagesMapper.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/contactMapper.php');
 
 class Controller{   
 

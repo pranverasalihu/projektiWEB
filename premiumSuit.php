@@ -1,9 +1,9 @@
 <?php 
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showRooms.php');
-    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/admin/functions.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showRooms.php');
+    require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/admin/functions.php');
     
     $rooms = new ShowRooms(); 
-    $room = $rooms->get_Room(5);
+    $room = $rooms->get_Room(10);
     $allRooms = $rooms->get_Rooms();
 
     

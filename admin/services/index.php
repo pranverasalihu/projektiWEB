@@ -1,5 +1,5 @@
 <?php require_once('./../functions.php');
-	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showServices.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showServices.php');
 
 ?>
 <?php get_header(); ?>

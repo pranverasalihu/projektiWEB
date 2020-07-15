@@ -1,7 +1,11 @@
 <?php 	
 
 require_once('./../../connection.php');
+<<<<<<< HEAD
 require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/insertPages.php');
+=======
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertPages.php');
+>>>>>>> 98723a13d7013c3919d5a6734f01032a15a995ad
 
 if ( !empty($_POST)) {
         // keep track validation errors

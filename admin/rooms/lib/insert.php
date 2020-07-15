@@ -1,6 +1,10 @@
 <?php 	
 require_once('./../../connection.php');
+<<<<<<< HEAD
 require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/insertRooms.php');
+=======
+require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/insertRooms.php');
+>>>>>>> 98723a13d7013c3919d5a6734f01032a15a995ad
 
 if ( !empty($_POST)) {
         // keep track validation errors
@@ -34,7 +38,11 @@ if ( !empty($_POST)) {
     		}
     		echo '<a href="../create.php">Back</a>';
     	}elseif($_FILES['image']['name'] !== ''){
+<<<<<<< HEAD
 	        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/projektiweb-master/admin/images/uploads/";
+=======
+	        $target_dir = $_SERVER['DOCUMENT_ROOT'] . "/projektiWEB-master/admin/images/uploads/";
+>>>>>>> 98723a13d7013c3919d5a6734f01032a15a995ad
 			$target_file = $target_dir . basename($_FILES["image"]["name"]);
 			$uploadOk = 1;
 			$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);

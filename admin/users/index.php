@@ -1,5 +1,5 @@
 <?php require_once('./../functions.php') ;
-	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showUsers.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showUsers.php');
 ?>
 <?php get_header(); ?>
 <section class="block_section">

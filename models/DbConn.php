@@ -15,8 +15,8 @@ class DBConnection
     public static function connect()
     {
        // One connection through whole application
-       if ( null == self::$cont )
-       {     
+      if ( null == self::$cont )
+      {     
         try
         {
           self::$cont =  new PDO( "mysql:host=".self::$dbHost.";"."dbname=".self::$dbName, self::$dbUsername, self::$dbUserPassword); 
@@ -25,8 +25,8 @@ class DBConnection
         {
           die($e->getMessage()); 
         }
-       }
-       return self::$cont;
+      }
+      return self::$cont;
     }
      
     public static function disconnect()

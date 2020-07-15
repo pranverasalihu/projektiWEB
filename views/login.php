@@ -1,6 +1,6 @@
 <?php
 
- require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/models/DBConn.php');
+ require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/models/DBConn.php');
 
 class Login
 {

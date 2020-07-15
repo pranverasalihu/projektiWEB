@@ -1,5 +1,5 @@
 <?php require_once('./../functions.php');
-	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiweb-master/views/showPages.php');
+	  require_once ($_SERVER['DOCUMENT_ROOT'].'/projektiWEB-master/views/showPages.php');
 ?>
 <?php get_header(); ?>
 <section class="block_section">
