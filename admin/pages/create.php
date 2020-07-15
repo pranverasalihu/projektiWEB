@@ -1,4 +1,8 @@
-<?php require_once('./../functions.php') ?>
+<?php 
+
+require_once('./../functions.php')
+
+?>
 <?php get_header(); ?>
 
 <section class="block_section">

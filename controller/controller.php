@@ -26,10 +26,10 @@ class Controller{
 
 
     //insert service
-    public function serviceInsert($title, $description, $image){
+    public function serviceInsert($title, $description){
        
         $serviceMapper = new ServiceMapper();
-        $serviceMapper->insert($title, $description, $image);
+        $serviceMapper->insert($title, $description);
         return true;
        
     }
@@ -60,10 +60,10 @@ class Controller{
 
 
     //insert room
-    public function roomInsert($title, $description, $image,$price){
+    public function roomInsert($title, $description,$price){
        
         $roomsMapper = new RoomsMapper();
-        $roomsMapper->insert($title,$description,$image,$excerpt);
+        $roomsMapper->insert($title,$description,$price);
         return true;
        
     }

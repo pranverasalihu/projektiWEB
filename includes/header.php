@@ -35,6 +35,7 @@
                             <li>
                                 <a class="<?php active('contact.php');?>" href="contact.php">Contact</a>
                             </li>
+                           
                             <?php if($isUserLogin): ?>
                                 <li>
                                     <a href="logout.php">Logout</a>

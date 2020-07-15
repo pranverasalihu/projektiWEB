@@ -13,15 +13,17 @@ class ServiceMapper
         
     }
 
-    public function insert($title, $description, $image){
+    public function insert($title, $description){
 
-        $sql = "INSERT INTO services (title,description,image) VALUES (:title,:description,:image)";
+        $sql = "INSERT INTO services (title,description,user_id) VALUES (:title,:description,:user_id)";
 
         $statement = $this->connection->prepare($sql);
         $statement->bindParam(":title", $title);
         $statement->bindParam(":description", $description);
-        $statement->bindParam(":image", $image);
-      
+        //$statement->bindParam(":image", $image);
+        
+        session_start();
+        $statement->bindParam(":user_id", $_SESSION['user_id']);
 
         $statement->execute();
     }
@@ -43,7 +45,7 @@ class ServiceMapper
     public function getServices(){
 
     
-        $servicesQuery = 'SELECT * FROM services';
+        $servicesQuery = 'SELECT s.*, u.username FROM services s LEFT JOIN users u ON s.user_id = u.user_id';
         $sth = $this->connection->prepare($servicesQuery);
         $sth->execute();
         $services = $sth->fetchAll();

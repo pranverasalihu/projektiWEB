@@ -13,6 +13,7 @@
 					<th>Title</th>
 					<th>Price</th>
 					<th>Image</th>
+					<th>Created by</th>
 					<th>Options</th>
 				</tr>
 			</thead>
@@ -31,6 +32,7 @@
 					<?php else: ?>
 						<td>No image Selected</td>
 					<?php endif?>
+					<td><?php echo $room['username']; ?></td>
 					<td>
 						<a href="edit.php?id=<?php echo $room['id']; ?>" style="color:green;">
 							<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>

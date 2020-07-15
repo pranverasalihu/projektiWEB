@@ -13,6 +13,7 @@
 					<th>Id</th>
 					<th>Title</th>
 					<th>Image</th>
+					<th>Created by</th>
 					<th>Options</th>
 				</tr>
 			</thead>
@@ -30,6 +31,7 @@
 					<?php else: ?>
 						<td>No image Selected</td>
 					<?php endif?>
+					<td><?php echo $service['username']; ?></td>
 					<td>
 						<a href="edit.php?id=<?php echo $service['id']; ?>" style="color:green;">
 							<i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>

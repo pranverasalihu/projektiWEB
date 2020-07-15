@@ -70,11 +70,12 @@ if ( !empty($_POST)) {
                     // insert data
                     $pdo = Database::connect();
                     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-                    $sql = "INSERT INTO services (title,description,image) values ( ?, ?,?)";
+                    $sql = "INSERT INTO services (title,description,image, user_id) values ( ?, ?,?,?)";
                     $q = $pdo->prepare($sql);
                     $domain = sprintf( "%s://%s", isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] != 'off' ? 'https' : 'http', $_SERVER['SERVER_NAME']);
                     $target_file = str_replace($_SERVER['DOCUMENT_ROOT'], $domain, $target_file);
-                    $q->execute(array($title,$description,$target_file));
+                    session_start();
+                    $q->execute(array($title,$description,$target_file, $_SESSION['user_id']));
                     Database::disconnect();
                     header("Location: ../index.php");                   
                 } else {
@@ -90,7 +91,7 @@ if ( !empty($_POST)) {
             $q->execute(array($title,$description,''));
             Database::disconnect();*/
             $s = new InsertServices();
-            $service = $s->insertService($title, $description, $image);
+            $service = $s->insertService($title, $description);
             header("Location: ../index.php");                   
         }
     }
