@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
+
+-- Generation Time: Jul 15, 2020 at 09:24 PM
+
 -- Generation Time: Jul 15, 2020 at 09:01 PM
+
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.3
 
@@ -112,10 +116,8 @@ INSERT INTO `rooms` (`id`, `title`, `price`, `description`, `image`, `created_at
 (4, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/doubleRoom.jpg', '2020-06-28 18:49:15', 1),
 (5, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor\r\nincididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud\r\nexercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \r\nirure dolor in reprehenderit in voluptate velit esse ', 'http://localhost/projektiWEB-master/admin/images/uploads/premiumSuit.jpg', '2020-06-28 18:50:39', 3),
 (9, 'asd', '12.00', 'asdasd', 'http://localhost/projektiweb-master/admin/images/uploads/aboutUs_hotel.jpg', '2020-07-15 19:02:49', 2);
-(8, 'Single Room', '49.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/singleRoom.jpg', '2020-07-15 18:54:35'),
-(9, 'Double Room', '89.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/doubleRoom.jpg', '2020-07-15 18:56:10'),
-(10, 'Premium Suit', '129.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/premiumSuit.jpg', '2020-07-15 18:56:28'),
-(11, 'Master Suit', '229.00', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/2020/vanoa/admin/images/uploads/masterSuit.jpg', '2020-07-15 18:56:45');
+
+
 -- --------------------------------------------------------
 
 --
@@ -140,6 +142,7 @@ INSERT INTO `services` (`id`, `title`, `description`, `image`, `created_at`, `us
 (2, 'FOOD', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/food.jpg', '2020-07-11 17:55:44', 2),
 (4, 'BAR', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/bar.jpg', '2020-07-11 17:56:05', 3),
 (7, 'POOL', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse', 'http://localhost/projektiWEB-master/admin/images/uploads/pool.jpg', '2020-07-11 17:56:19', 1);
+
 
 -- --------------------------------------------------------
 
@@ -235,7 +238,9 @@ ALTER TABLE `roles`
 -- AUTO_INCREMENT for table `rooms`
 --
 ALTER TABLE `rooms`
+
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+
 
 --
 -- AUTO_INCREMENT for table `services`
